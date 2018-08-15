@@ -34,8 +34,8 @@ Remove backend servers from a VServer group.
 
 ## Response parameters {#section_ssd_pds_cz .section}
 
-|Name|Type|Required|
-|:---|:---|:-------|
+|Name|Type|Description|
+|:---|:---|:----------|
 |RequestId|String|The ID of the request.|
 |VServerGroupId|String|The ID of the VServer group.|
 |Backendservers|List|The list of backend servers.|
