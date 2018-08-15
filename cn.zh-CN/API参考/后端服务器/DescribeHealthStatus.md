@@ -21,8 +21,8 @@
 
 |名称|类型|描述|
 |:-|:-|:-|
-|RequestId|string|请求ID。|
-|BackendServers|List|数组格式，返回负载均衡内多个后端服务器的信息，详见下表。|
+|RequestId|String|请求ID。|
+|BackendServers|List|后端服务器列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
