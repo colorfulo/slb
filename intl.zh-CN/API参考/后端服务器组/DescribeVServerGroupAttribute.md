@@ -21,7 +21,9 @@
 |RequestId|String|请求ID。|
 |VServerGroupId|String|服务器组ID。|
 |VServerGroupName|String|服务器组名称。|
-|BackendServers|List|后端服务器列表。|
+|BackendServers|StringJSON格式的List
+
+|后端服务器列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
