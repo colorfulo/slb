@@ -19,13 +19,13 @@ Query the health status of the backend servers.
 
 ## Response parameters {#section_ssd_pds_cz .section}
 
-|Name|Type|Required|
-|:---|:---|:-------|
+|Name|Type|Description|
+|:---|:---|:----------|
 |RequestId|String|The ID of the request.|
 |BackendServers|List|A list of backend servers.|
 
-|Name |Type|Required|
-|:----|:---|:-------|
+|Name |Type|Description|
+|:----|:---|:----------|
 |ServerId|String|The ID of the ECS instance|
 |ServerHealthStatus|String|The health check status of the backend server:-   normal: The backend server is healthy.
 -   abnormal: The backend server is unhealthy.
