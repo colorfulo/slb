@@ -14,7 +14,7 @@
 |
 |VServerGroupId|String|是|服务器组ID。|
 |OldBackendServers|List|是|要被替换的后端服务器列表。|
-|NewBackendServers|List|是|新的后端服务器列表。一个服务器组最多可包含20个后端服务器。
+|NewBackendServers|List|是|新的后端服务器列表。一个服务器组最多可调用20个后端服务器。
 
 **说明：** 确保OldBackendServers和NewBackendServers服务器组列表中的后端服务器个数相同。
 
