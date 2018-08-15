@@ -40,13 +40,11 @@ Replace backend servers in a VServer group.
 
 ## Response parameters {#section_ssd_pds_cz .section}
 
-|Name|Type|Required|
-|:---|:---|:-------|
+|Name|Type|Description|
+|:---|:---|:----------|
 |RequestId|String|The ID of the request.|
 |VServerGroupId|String|The ID of VServer group.|
-|BackendServers|StringA list of backend servers.
-
-|The list of backend servers.|
+|BackendServers|String|The list of backend servers.|
 
 ## Examples {#section_oxr_pds_cz .section}
 
