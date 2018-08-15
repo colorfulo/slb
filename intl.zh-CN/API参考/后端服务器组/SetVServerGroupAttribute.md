@@ -14,9 +14,7 @@
 |
 |VServerGroupId|String|是|虚拟服务器组ID。|
 |VServerGroupName|String|否|虚拟服务器组名称。|
-|BackendServers|List|否|虚拟服务器组列表。一个服务器组最多可调用20个后端服务器。
-
-如果不指定该参数，则创建一个空的服务器组列表。
+|BackendServers|List|否|虚拟服务器组列表。一个服务器组最多可包含20个后端服务器。
 
 |
 
