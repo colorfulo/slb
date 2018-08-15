@@ -25,6 +25,10 @@
 |Port|Integer|是|后端服务器使用的端口。取值范围：1-65535
 
 |
+|Type|String|是|后端服务器类型，取值：-   ecs：ECS实例（默认）
+-   eni：弹性网卡实例
+
+|
 
 ## 返回参数 {#section_ssd_pds_cz .section}
 
@@ -44,8 +48,8 @@ https://slb.aliyuncs.com/?Action=RemoveVServerGroupBackendServers
 &LoadBalancerId=lb-t4nj5vuz8ish9emfk1f20
 &VServerGroupName=Group1
 &BackendServers=[
-    {"ServerId":"vm-233","Port":"80","Weight":"100"},
-    {"ServerId":"vm-232","Port":"90","Weight":"100"},
+    {"ServerId":"vm-233","Port":"80","Weight":"100","Type":"ecs},
+    {"ServerId":"vm-232","Port":"90","Weight":"100","Type":"ecs},
 ]
 &公共请求参数
 ```
@@ -64,6 +68,7 @@ https://slb.aliyuncs.com/?Action=RemoveVServerGroupBackendServers
     			<ServerId>vm-231</ServerId>
     			<Port>70</Port>
     			<Weight>100</Weight>
+                            <Type>ecs</Type>
     		</BackendServer>
     	</BackendServers>
     </RemoveVServerGroupBackendServersResponse>
@@ -77,9 +82,9 @@ https://slb.aliyuncs.com/?Action=RemoveVServerGroupBackendServers
       "VServerGroupId":"rsp-cige6j5e7p",
       "BackendServers":{
       "BackendServer":[
-        {"ServerId":"vm-233","Port":"80","Weight":"100"},
-        {"ServerId":"vm-232","Port":"90","Weight":"100"},
-        {"ServerId":"vm-231","Port":"70","Weight":"100"}
+        {"ServerId":"vm-233","Port":"80","Weight":"100","Type":"ecs},
+        {"ServerId":"vm-232","Port":"90","Weight":"100","Type":"ecs},
+        {"ServerId":"vm-231","Port":"70","Weight":"100","Type":"ecs}
         ]
       }
     }
