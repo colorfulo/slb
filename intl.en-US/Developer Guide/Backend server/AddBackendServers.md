@@ -12,9 +12,7 @@ Add backend servers to a Server Load Balancer \(SLB\) instance.
 
 |
 |LoadBalancerId|String | Yes|The ID of the Server Load Balancer instance.|
-|BackendServers|StringList
-
-|Yes|The list of backend servers to be added.**Note:** Only backend servers in the running status can be added. You can add up to 20 backend servers at a time.
+|BackendServers|List|Yes|The list of backend servers to be added.**Note:** Only backend servers in the running status can be added. You can add up to 20 backend servers at a time.
 
 |
 
