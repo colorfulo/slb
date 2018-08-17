@@ -14,6 +14,8 @@
 |acs:slb:\*:\*:loadbalancer/\*|
 |Certificate|acs:slb:$regionid:$accountid:certificate/$servercertificateId|
 |acs:slb:$regionid:$accountid:certificate/\*|
+|ACL|acs:slb:$regionid:$accountid:acl/\*|
+|acs:slb:$regionid:$accountid:acl/$aclid|
 
 其中`$regionid/accoutid/servercertificateId` 为具体的资源ID，`*`代表对应的所有资源。
 
@@ -72,4 +74,11 @@
 |acs:ecs:$regionid:$accountid:instance/$instanceid|
 |ModifyVServerGroupBackendServers|acs:slb:$regionid:$accountid:loadbalancer/$loadbalancerid|
 |acs:ecs:$regionid:$accountid:instance/$instanceid|
+|CreateAccessControlList|acs:slb:$regionid:$accountid:acl/\*|
+|DeleteAccessControlList|acs:slb:$regionid:$accountid:acl/$aclid|
+|DescribeAccessControlLists|acs:slb:$regionid:$accountid:acl/$aclid|
+|DescribeAccessControlListAttribute|acs:slb:$regionid:$accountid:acl/$aclid|
+|SetAccessControlListAttribute|acs:slb:$regionid:$accountid:acl/$aclid|
+|AddAccessControlListEntry|acs:slb:$regionid:$accountid:acl/$aclid|
+|RemoveAccessControlListEntry|acs:slb:$regionid:$accountid:acl/$aclid|
 
