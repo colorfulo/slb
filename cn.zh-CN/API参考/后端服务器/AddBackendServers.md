@@ -35,7 +35,9 @@
 |:-|:-|:-|
 |RequestId|String|请求ID。|
 |LoadBalancerId|String|负载均衡实例ID。|
-|BackendServers|List|后端服务器列表。|
+|BackendServers|StringJSON格式的List
+
+|后端服务器列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
