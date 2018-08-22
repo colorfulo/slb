@@ -8,11 +8,13 @@
 
 |名称|类型|是否必须|描述|
 |:-|:-|:---|:-|
-|Action|String|是|要执行的操作。取值：AddBackendServers
+|Action|String|是|要执行的操作，取值：AddBackendServers
 
 |
 |LoadBalancerId|String|是|负载均衡实例的ID。|
-|BackendServers|List|是|要添加的后端服务器列表。**说明：** 后端服务器（ECS实例）必须是运行中才可以加入负载均衡实例，一次最多可添加20个后端服务器。
+|BackendServers|StringJSON格式的List
+
+|是|要添加的后端服务器列表。**说明：** 后端服务器（ECS实例）必须是运行中才可以加入负载均衡实例，一次最多可调用20个后端服务器。
 
 |
 
