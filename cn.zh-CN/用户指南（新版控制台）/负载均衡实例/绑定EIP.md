@@ -8,9 +8,9 @@
 
     **说明：** 确保负载均衡实例的网络类型为专有网络。
 
-4.  单击**管理** \> **绑定EIP**。 
+4.  单击**更多** \> **绑定EIP**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16155/7389_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16155/15350109397389_zh-CN.png)
 
 5.  选择一个EIP，然后单击**确认**。 
 
