@@ -11,16 +11,16 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 完成以下操作，打开监听配置向导：
 
 1.  登录[负载均衡管理控制台](https://slb.console.aliyun.com)。
-2.  在左侧导航栏，单击**实例** \> **实例管理**。
+2.  在左侧导航栏，选择**实例** \> **实例管理**。
 3.  选择实例的地域。
 4.  选择以下一种方法，打开监听配置向导：
     -   在实例管理页面，找到目标实例，然后单击**添加配置向导**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7398_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153501118610004_zh-CN.png)
 
     -   在实例管理页面，单击目标实例ID。在监听页面，单击**添加监听**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7399_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15350111867399_zh-CN.png)
 
 
 ## 步骤二 配置协议监听 {#section_ly4_2pn_42b .section}
@@ -39,12 +39,12 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 **说明：** 在同一个负载均衡实例内，监听端口不可重复。
 
 |
+    |**高级配置**|
     |**调度算法**|负载均衡支持轮询、加权轮询（WRR）、加权最小连接数（WLC）三种调度算法。    -   **加权轮询**：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
     -   **轮询**：按照访问顺序依次将外部请求依序分发到后端服务器。
     -   **加权最小连接数**：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。
 |
-    |**高级配置**|
-    |**会话保持**| 选择是否开启会话保持。
+    |**开启会话保持**| 选择是否开启会话保持。
 
  开启会话保持功能后，负载均衡会把来自同一客户端的访问请求分发到同一台后端服务器上进行处理。
 
@@ -72,10 +72,10 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 如果开启了黑名单访问，但访问策略组中没有添加任何IP，则负载均衡监听会转发全部请求。
 
  |
-    |**选择访问控制策略组**|选择访问控制策略组，作为该监听的白名单或黑名单。**说明：** IPv6实例只能绑定IPv6访问控制策略组，IPv4实例只能绑定IPv4访问控制策略组。详情参见[访问控制策略组](cn.zh-CN/用户指南/访问控制/配置访问控制策略组.md#)。
+    |**选择访问控制策略组**|选择访问控制策略组，作为该监听的白名单或黑名单。**说明：** IPv6实例只能绑定IPv6访问控制策略组，IPv4实例只能绑定IPv4访问控制策略组。详情参见[访问控制策略组](cn.zh-CN/用户指南（旧版，即将下线）/访问控制/配置访问控制策略组.md#)。
 
 |
-    |**开启带宽峰值**| 选择是否配置监听带宽。
+    |**开启监听带宽限速**| 选择是否配置监听带宽。
 
  对于按带宽计费的负载均衡实例，您可以针对不同监听设定不同的带宽峰值来限定监听的流量。实例下所有监听的带宽峰值总和不能超过该实例的带宽。
 
@@ -89,7 +89,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 该功能已经在全部地域开放。
 
 |
-    |**请求超时时间**|指定请求超时时间，取值范围为1-180秒。在超时时间内后端服务器一直没有响应，负载均衡将放弃等待，给客户端返回HTTP 504错误码。
+    |**连接请求超时时间**|指定请求超时时间，取值范围为1-180秒。在超时时间内后端服务器一直没有响应，负载均衡将放弃等待，给客户端返回HTTP 504错误码。
 
 该功能已经在全部地域开放。
 
@@ -112,7 +112,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 
 2.  单击**下一步**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15653/7437_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153501118610035_zh-CN.png)
 
 
 ## 步骤三 配置SSL证书 {#section_m52_pxn_42b .section}
@@ -142,7 +142,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 -   上传的证书格式必须是PEM。详情参见[证书要求](cn.zh-CN/用户指南（新版控制台）/证书管理/证书要求.md#)。
 -   证书上传到负载均衡后，负载均衡即可管理证书，不需要在后端ECS上绑定证书。
 -   因为证书的上传、加载和验证都需要一些时间，所以使用HTTPS协议的实例生效也需要一些时间。一般一分钟后就会生效，最长不会超过三分钟。
--   HTTPS监听使用的ECDHE算法簇支持前向保密技术，不支持将DHE算法簇所需要的安全增强参数文件上传，即PEM证书文件中含`BEGIN DH PARAMETERS`字段的字串上传。更多详细信息，参考[证书要求](cn.zh-CN/用户指南/证书管理/证书要求.md#)。
+-   HTTPS监听使用的ECDHE算法簇支持前向保密技术，不支持将DHE算法簇所需要的安全增强参数文件上传，即PEM证书文件中含`BEGIN DH PARAMETERS`字段的字串上传。更多详细信息，参考[证书要求](cn.zh-CN/用户指南（旧版，即将下线）/证书管理/证书要求.md#)。
 -   目前负载均衡HTTPS监听不支持SNI（Server Name Indication），您可以改用TCP监听在后端ECS上实现SNI功能。
 -   HTTPS监听的会话ticket保持时间设置为300秒。
 -   HTTPS监听实际产生的流量会比账单流量更多一些，因为会使用一些流量用于协议握手。
@@ -156,7 +156,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 
 2.  如果您要开启HTTPS双向认证，单击**修改**，开启双向认证。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15653/7439_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/15350111869566_zh-CN.png)
 
 3.  选择一个已上传的CA证书，或单击**新建CA证书**上传一个CA证书。
 
@@ -171,11 +171,11 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 
 1.  选择**默认服务器组**，单击**添加**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153501118610036_zh-CN.png)
 
-2.  选择要添加的ECS实例，然后单击**加入待添加篮子**。单击**确定**。
+2.  选择要添加的ECS实例，然后单击**加入待添加篮**。单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/7499_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15350111867499_zh-CN.png)
 
 3.  配置添加的后端服务器的端口和权重。
     -   端口
@@ -188,7 +188,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 
         **说明：** 权重设置为0，该服务器不会再接受新请求。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/7504_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15350111867504_zh-CN.png)
 
 4.  单击**下一步**。
 
@@ -196,7 +196,7 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 
 负载均衡通过健康检查来判断后端服务器（ECS实例）的业务可用性。健康检查机制提高了前端业务整体可用性，避免了后端ECS异常对总体服务的影响。单击**修改**更改健康检查配置，详情参见[配置健康检查](cn.zh-CN/用户指南（新版控制台）/健康检查/配置健康检查.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7416_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153501118610037_zh-CN.png)
 
 ## 步骤六 提交配置 {#section_hwm_qnn_42b .section}
 
@@ -205,12 +205,12 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 1.  在审核提交页面，检查监听配置，您可以单击**修改**更改配置。确认无误后，单击**提交**。
 2.  在配置审核页面，在配置成功后，单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7417_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153501118610038_zh-CN.png)
 
 
 配置成功后，您可以在监听页面查看已创建的监听。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7418_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153501118610039_zh-CN.png)
 
 ## 相关操作 {#section_pz4_2pn_42b .section}
 
@@ -222,5 +222,5 @@ HTTP协议适用于需要加密传输的应用。您可以添加一个HTTPS监�
 -   [上传证书](cn.zh-CN/用户指南（新版控制台）/证书管理/上传证书.md#)
 -   [设置访问控制](cn.zh-CN/用户指南（新版控制台）/访问控制/设置访问控制.md#)
 -   [添加域名和路径转发](cn.zh-CN/用户指南（新版控制台）/监听/添加域名和路径转发.md#)
--   [配置扩展域名（Beta）](cn.zh-CN/用户指南（新版控制台）/监听/配置扩展域名（Beta）.md#)
+-   [管理扩展域名](cn.zh-CN/用户指南（新版控制台）/监听/扩展域名（Beta）/管理扩展域名.md#)
 
