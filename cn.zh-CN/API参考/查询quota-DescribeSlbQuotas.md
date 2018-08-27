@@ -31,7 +31,7 @@
 |一个rs可以关联最大SLB的数量|slbs-per-backendserver|`Max number of SLB instances that a single backend server can be attached to`|Region 中单SLB实例|50|
 |SLB后端可以挂载最大rs的数量|backendservers-per-slb|`Max number of backend servers can be attached to a single SLB instance`|Region 中单SLB实例|200|
 |SLB监听上限|listeners-per-slb|`Max number of listeners per SLB instance`|Region 中单SLB实例|50|
-|SLB的URL转发规则|rules-per-listener|`Max number of forwarding rule per listener`|Region 中单SLB实例|20|
+|SLB的URL转发规则|rules-per-listener|`Max number of forwarding rule per listener`|Region 中单SLB实例|40|
 |SNI扩展域名数量|domain-extensions-per-listener|`Max number of extension domains per listener`|单实例+监听|3|
 |每个地域单账号可创建的访问控制策略组个数|acls-per-region|`Max number of access control lists per region`|Region 账号|50|
 |每个ACL规则可以关联监听的个数|listeners-per-acl|`Max number of listeners that an single access control list can be attached to`|单监听|50|
