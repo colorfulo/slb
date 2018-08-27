@@ -7,7 +7,7 @@ You can release an SLB instance immediately or on schedule.
 
     You can select multiple SLB instances at a time and click **Release** in the lower part of the page to release SLB instance in batches.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16162/15353627207450_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16162/15353627507450_en-US.png)
 
 3.  On the Release page, select to release now or release on schedule. 
 
