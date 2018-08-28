@@ -2,15 +2,11 @@
 
 Alibaba Cloud provides Layer-4 and Layer-7 load balancing services, and other functions such as health check, session persistence, domain forwarding and so on to ensure high availability of your applications.
 
-|Feature|Layer-4 Server Load Balancer|Layer-7 Server Load Balancer|
-|:------|:---------------------------|:---------------------------|
+|Feature|Layer-4 SLB|Layer-7 SLB|
+|:------|:----------|:----------|
 | Scheduling algorithm
 
  Server Load Balancer supports three scheduling algorithms: round robin, weighted round robin \(WRR\), and weighted least connections \(WLC\).
-
--   Round robin: Requests are distributed across backend servers sequentially.
--   Weighted round robin \(WRR\): Requests are distributed according to the weights of backend servers. Backend servers with higher weights receive more requests than those with smaller weights.
--   Weighted least connections \(WLC\): In addition to weights set for backend servers, the number of connections to servers is also considered. When the weight is the same, a backend server with a smaller number of connections is more frequently \(and probably\) accessed.
 
  |✔|✔|
 | Health check
