@@ -73,73 +73,73 @@ Traffic fees of Internet SLB instances are billed as follows:
     |Australia \(Sydney\)|0.130|
 
 
-## 规格费 {#section_r13_y1h_j2b .section}
+## Capacity fee {#section_r13_y1h_j2b .section}
 
-性能保障型实例规格费按使用量收取，即不论您选择何种规格，实例规格规格费均按照您实际使用的规格收取。如果实例的实际性能指标在两个规格之间，按照较大规格的费用计算（向上取整原则）。
+The capacity fee of a guaranteed-performance instance is charged based on usage regardless of the capacity that you choose. If the actual performance metrics is between two capacities, the cost is calculated according to the larger capacity.
 
-比如，您选择了超强型I \(slb.s3.large\) 规格（最大连接数1,000,000；CPS 500,000；QPS 500,00）。该实例在某小时内各项指标产生的实际峰值如下：
+For example, the capacity slb.s3.large \(1,000,000; CPS 500,000; QPS 50,000\) is selected. The actual usage of your instance in an hour is as follow:
 
-|最大连接数|每秒新建连接数（CPS）|每秒查询数 （QPS）|
-|:----|:-----------|:----------|
+|Max Connection|CPS|QPS|
+|:-------------|:--|:--|
 |90,000|4,000|11,000|
 
--   从最大连接数维度看，90,000超过slb.s2.small规格中最大连接数50,000的上限，但未达到slb.s2.medium规格中最大连接数100,000的上限，因此从最大连接数维度计算，该小时规格为slb.s2.medium。
+-   From the perspective of Max Connection, the actual metrics 90,000 occurs between the limit 50,000 defined in the Standard I \(slb.s2.small\) capacity and the limit 100,000 defined in the Standard II \(slb.s2.medium\) capacity. Therefore, the capacity of the Max Connection metrics in this hour is Standard II \(slb.s2.medium\).
 
--   从每秒新建连接数（CPS）维度看，4,000超过slb.s1.small规格中CPS 3,000的上限，但未到达slb.s2.small规格中CPS 5,000的上限，因此从CPS维度计算，该小时规格为slb.s2.small。
+-   From the perspective of CPS, the actual metrics 4,000 occurs between the limit 3,000 defined in the Small I \(slb.s1.small\) specification and the limit 5,000 defined in the Standard I \(slb.s2.small\) specification. Therefore, the specification of the CPS metrics in this hour is Standard I \(slb.s2.small\).
 
--   从每秒查询数（QPS）维度看，11,000超过slb.s2.medium规格中PS 10,000的上限，但未达到slb.s3.small中QPS 20,000的上限，因此从QPS维度计算，该小时规格为slb.s3.small。
+-   From the perspective of QPS, the actual metrics 11,000 occurs between the limit 10,000 defined in the Standard II \(slb.s2.medium\) capacity and the limit 20,000 defined in the Higher I \(slb.s3.small\) capacity. Therefore, the capacity of the QPS metrics in this hour is Higher I \(slb.s3.small\).
 
-    综合以上三个维度，QPS指标的规格（slb.s3.small）最大，因此将QPS维度的规格作为该小时实例的综合规格，该小时内该实例将按照slb.s3.small规格进行计费。
+    Comparing these three metrics, the specification of the QPS metrics is highest, therefore, the specification fee of the instance in this hour is charged at the price of the Higher I \(slb.s3.small\) specification.
 
 
-以后每小时规格费均按照上述方式计算，如下图所示：
+The following figure is an example showing how the specification fee is billed for an SLB instance in the first three hours: 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15354565863113_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15354641353113_en-US.png)
 
-因此，按量付费的性能保障型实例具有自动弹性伸缩（或计费）的能力。您在购买时所选的规格，是性能的上限，比如您选择高阶型II \(slb.s3.medium\)，那么意味着，您的实例最大可以达到的规格上限就是高阶型II \(slb.s3.medium\)。
+The billing of the guaranteed-performance instances is flexible.  The capacity you select when purchasing an instance is the performance limitation of the instance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
-下表中的价格仅供参考，具体价格请以控制台为准。
+The price in the following table is only for reference. Take the price on the console as standard.
 
-|地域|规格|最大连接数|每秒新建连接数 \(CPS\)|每秒查询数\(QPS\)|规格费（美元/小时）|
-|:-|:-|:----|:--------------|:-----------|:---------|
-| 华东1（杭州）
+|Region| Capacity|Max Connection|CPS|QPS|Capacity fee \(USD/Hour\)|
+|:-----|:--------|:-------------|:--|:--|:------------------------|
+| China \(Hangzhou\) 
 
- 华北3（张家口）
+ China \(Zhangjiakou\)
 
- 华北5（呼和浩特）
+ China \(Huhhot\)
 
- 华北1（青岛）
+ China \(Qingdao\) 
 
- 华北2（北京）
+ China \(Beijing\)  
 
- 华东2（上海）
+ China \(Shanghai\) 
 
- 华南1（深圳\)
+ China \(Shenzhen\)
 
- |规格1：简约型I \(slb.s1.small\)|5000|3000|1000|免费|
-|规格2：标准型I \(slb.s2.small\)|50,000|5,000|5,000|0.05|
-|规格3：标准型II \(slb.s2.medium\)|100,000|10,000|10,000|0.10|
-|规格4：高阶型I \(slb.s3.small\)|200,000|20,000|20,000|0.20|
-|规格5：高阶型II \(slb.s3.medium\)|500,000|50,000|30,000|0.31|
-|规格6：超强型I \(slb.s3.large\)|1,000,000|100,000|50,000|0.51|
-| 亚太东南1（新加坡）
+ |Small I \(slb.s1.small\)|5,000|3,000|1,000|Free|
+|Standard I \(slb.s2.small\)|50,000|5,000|5,000|0.05|
+|Specification 3: Standard II \(slb.s2.medium\)|100,000|10,000|10,000|0.10|
+|Higher I \(slb.s3.small\)|200,000|20,000|20,000|0.20|
+|Higher II \(slb.s3.medium\)|500,000|50,000|30,000|0.31|
+|Extra I \(slb.s3.large\)|1,000,000|100,000|50,000|0.51|
+| Singapore
 
- 亚太东南3（吉隆坡）
+ Malaysia \(Kuala Lumpur\) 
 
- 亚太东南5（雅加达）
+ Indonesia \(Jakarta\) 
 
- 亚太南部1（孟买）
+ India \(Mumbai\)
 
- 美国西部1（硅谷）
+ US \(Silicon Valley\)
 
- 美国东部1（弗吉尼亚）
+ US \(Virginia\)
 
- 香港
+ China \(Hong Kong\)
 
- |规格1：简约型I \(slb.s1.small\)|5,000|3,000|1,000|免费|
-|规格2：标准型I \(slb.s2.small\)|50,000|5,000|5,000|0.06|
-|规格3：标准型II \(slb.s2.medium\)|100,000|10,000|10,000|0.12|
-|规格4：高阶型I \(slb.s3.small\)|200,000|20,000|20,000|0.24|
-|规格5：高阶型II \(slb.s3.medium\)|500,000|50,000|30,000|0.37|
-|规格6：超强型I \(slb.s3.large\)|1,000,000|100,000|50,000|0.61|
+ |Small I \(slb.s1.small\)|5,000|3,000|1,000|Free|
+|Standard I \(slb.s2.small\)|50,000|5,000|5,000|0.06|
+|Standard II \(slb.s2.medium\)|100,000|10,000|10,000|0.12|
+|Higher I \(slb.s3.small\)|200,000|20,000|20,000|0.24|
+|Higher II \(slb.s3.medium\)|500,000|50,000|30,000|0.37|
+|Extra I \(slb.s3.large\)|1,000,000|100,000|50,000|0.61|
 
