@@ -100,6 +100,19 @@
 |[DescribeTags](cn.zh-CN/API参考/标签/DescribeTags.md#)|查询已创建的标签。|
 |[RemoveTags](cn.zh-CN/API参考/标签/RemoveTags.md#)|解绑负载均衡实例的标签。|
 
+## 服务器证书API {#section_wpm_bvp_y2b .section}
+
+|API|描述|
+|---|--|
+|[UploadServerCertificate](cn.zh-CN/API参考/服务器证书/UploadServerCertificate.md#)|上传服务器证书。|
+|[DeleteServerCertificate](cn.zh-CN/API参考/服务器证书/DeleteServerCertificate.md#)|删除服务器证书。|
+|[DescribeServerCertificates](cn.zh-CN/API参考/服务器证书/DescribeServerCertificates.md#)|查询已上传的服务器证书。|
+|[SetServerCertificateName](cn.zh-CN/API参考/服务器证书/SetServerCertificateName.md#)|设置服务器证书名称。|
+|[UploadCACertificate](cn.zh-CN/API参考/服务器证书/UploadCACertificate.md#)|上传CA证书。|
+|[DeleteCACertificate](cn.zh-CN/API参考/服务器证书/DeleteCACertificate.md#)|删除CA证书。|
+|[DescribeCACertificates](cn.zh-CN/API参考/服务器证书/DescribeCACertificates.md#)|查询已上传的CA证书。|
+|[SetCACertificateName](cn.zh-CN/API参考/服务器证书/SetCACertificateName.md#)|设置CA证书名称。|
+
 ## 日志API {#section_f4r_grj_s2b .section}
 
 |API|描述|
@@ -115,4 +128,10 @@
 |[SetLogsDownloadStatus](cn.zh-CN/API参考/健康检查日志/SetLogsDownloadStatus.md#)|设置日志健康检查状态开关。|
 |[DescribeLogsDownloadStatus](cn.zh-CN/API参考/健康检查日志/DescribeLogsDownloadStatus.md#)|查询日志健康检查状态开关。|
 |[DescribeRealtimeLogs](cn.zh-CN/API参考/健康检查日志/DescribeRealtimeLogs.md#)|查询健康检查日志。|
+
+## 查询资源约束API {#section_vws_rvp_y2b .section}
+
+|API|描述|
+|---|--|
+|[查询quota-DescribeSlbQuotas](cn.zh-CN/API参考/查询quota-DescribeSlbQuotas.md#)|查询负载均衡实例的资源约束。|
 
