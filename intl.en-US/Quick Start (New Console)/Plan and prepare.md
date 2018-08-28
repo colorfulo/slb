@@ -28,10 +28,6 @@ Server Load Balancer provides Internet and Intranet load balancing services:
 Server Load Balancer launched guaranteed-performance instances on April 1, 2018. With guaranteed-performance instances, you can exclusively use your instance resources to guarantee service availability. Alibaba Cloud Server Load Balancer provides 6 specifications for you to use.
 
 -   For a Pay-As-You-Go instance, you can select the largest specification \(slb.s3.large\). This guarantees the business flexibility \(flexibility\) and will not cause extra costs. But if you think your business is unlikely to reach Super I \(slb.s3.large\), you can also set a reasonable limit of flexibility, such as slb.s3.medium.
--   对于预付费实例，您需要评估您的实际业务量，然后选择一个较合适的规格，对于业务量评估来说，主要参考下面几个原则：
-    -   如果是四层监听，关注的重点是长连接的并发连接数，那么最大（并发）连接数应当作为一个关键指标来参考。 根据不同的业务场景，您需要预估一个负载均衡实例需要承载的最大并发连接数，并选择相应的规格。
-    -   如果是七层监听，关注的重点是QPS的性能，QPS决定了一个七层应用系统的吞吐量。 同样，您也需要根据经验对QPS进行预估。 在初步选定一个规格后，在业务压测和实测过程中对规格进行微调。
-    -   结合与性能保障型实例一起推出的其它关键监控指标，查看实际业务流量的走势、峰值情况，对性能规格进行更加精确的选取。
 
 ## Select a listener protocol {#section_bhq_r4l_vdb .section}
 
