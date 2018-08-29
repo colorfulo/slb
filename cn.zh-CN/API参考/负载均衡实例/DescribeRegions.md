@@ -20,12 +20,12 @@
 |名称|类型|描述|
 |:-|:-|:-|
 |RequestId|String|请求ID。|
-|RegionEndpoint|String|Region服务的Endpoint地址。|
 |Regions|List|地域列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
 |RegionId|String|地域ID。|
+|RegionEndpoint|String|Region服务的Endpoint地址。|
 |LocalName|String|地域名称。|
 
 ## 示例 {#section_oxr_pds_cz .section}
