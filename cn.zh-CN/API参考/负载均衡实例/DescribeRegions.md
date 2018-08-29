@@ -9,12 +9,18 @@
 |Action|String|是|要执行的操作。取值：DescribeRegions
 
 |
+|AcceptLanguage|String|否|支持的语言。包括以下取值：-   中文：zh-CN
+-   英文：en-US
+-   日文：ja
+
+|
 
 ## 返回参数 {#section_ssd_pds_cz .section}
 
 |名称|类型|描述|
 |:-|:-|:-|
 |RequestId|String|请求ID。|
+|RegionEndpoint|String|Region服务的Endpoint地址。|
 |Regions|List|地域列表。|
 
 |名称|类型|描述|
