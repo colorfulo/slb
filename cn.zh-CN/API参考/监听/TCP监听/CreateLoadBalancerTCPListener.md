@@ -50,6 +50,9 @@
  取值：10-900（秒）
 
  |
+|Description|String|否| 设置监听的描述信息。
+
+ |
 |AclStatus|String|否| 是否开启访问控制功能。
 
  取值：on | off（默认值）
