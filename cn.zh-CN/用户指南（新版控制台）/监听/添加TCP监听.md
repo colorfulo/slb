@@ -11,16 +11,16 @@ TCP协议适用于注重可靠性，对数据准确性要求高，速度可以�
 完成以下操作，打开监听配置向导：
 
 1.  登录[负载均衡管理控制台](https://slb.console.aliyun.com)。
-2.  在左侧导航栏，单击**实例** \> **实例管理**。
+2.  在左侧导航栏，选择**实例** \> **实例管理**。
 3.  选择实例的地域。
 4.  选择以下一种方法，打开监听配置向导：
     -   在实例管理页面，找到目标实例，然后单击**添加配置向导**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7398_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208710004_zh-CN.png)
 
     -   在实例管理页面，单击目标实例ID。在监听页面，单击**添加监听**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7399_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15356020877399_zh-CN.png)
 
 
 ## 步骤二 配置协议监听 {#section_mhj_lmn_42b .section}
@@ -31,7 +31,7 @@ TCP协议适用于注重可靠性，对数据准确性要求高，速度可以�
 
     |监听配置|说明|
     |:---|:-|
-    |**监听协议**|选择监听的协议类型。本操作，选择**UDP**。
+    |**选择负载均衡协议**|选择监听的协议类型。本操作，选择**TCP**。
 
 |
     |**监听端口**|用来接收请求并向后端服务器进行请求转发的监听端口。端口范围为1-65535。
@@ -39,12 +39,15 @@ TCP协议适用于注重可靠性，对数据准确性要求高，速度可以�
 **说明：** 在同一个负载均衡实例内，监听端口不可重复。
 
 |
+    |**高级配置**|
     |**调度算法**|负载均衡支持轮询、加权轮询（WRR）、加权最小连接数（WLC）三种调度算法。    -   **加权轮询**：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
     -   **轮询**：按照访问顺序依次将外部请求依序分发到后端服务器。
     -   **加权最小连接数**：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。
+    -   （部分地域支持）**一致性哈希（CH）**：
+        -   **源IP**：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。
+        -   **四元组**：基于四元组的一致性hash（源IP+目的IP+源端口+目的端口），相同的流会调度到相同的后端服务器。
 |
-    |**高级配置**|
-    |**会话保持**|是否开启会话保持。开启会话保持后，负载均衡监听会把来自同一客户端的访问请求分发到同一台后端服务器上。
+    |**开启会话保持**|是否开启会话保持。开启会话保持后，负载均衡监听会把来自同一客户端的访问请求分发到同一台后端服务器上。
 
 TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请求转发到同一台后端服务器上。
 
@@ -61,10 +64,10 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 如果开启了黑名单访问，但访问策略组中没有添加任何IP，则负载均衡监听会转发全部请求。
 
  |
-    |**选择访问控制策略组**|选择访问控制策略组，作为该监听的白名单或黑名单。**说明：** IPv6实例只能绑定IPv6访问控制策略组，IPv4实例只能绑定IPv4访问控制策略组。详情参见[访问控制策略组](cn.zh-CN/用户指南/访问控制/配置访问控制策略组.md#)。
+    |**选择访问控制策略组**|选择访问控制策略组，作为该监听的白名单或黑名单。**说明：** IPv6实例只能绑定IPv6访问控制策略组，IPv4实例只能绑定IPv4访问控制策略组。详情参见[访问控制策略组](cn.zh-CN/用户指南（旧版，即将下线）/访问控制/配置访问控制策略组.md#)。
 
 |
-    |**开启带宽峰值**| 选择是否配置监听带宽。
+    |**开启监听带宽限速**| 选择是否配置监听带宽。
 
  对于按带宽计费的负载均衡实例，您可以针对不同监听设定不同的带宽峰值来限定监听的流量。实例下所有监听的带宽峰值总和不能超过该实例的带宽。
 
@@ -74,12 +77,13 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
  |
     |**连接超时时间**|指定TCP连接的超时时间，范围10-900秒。|
+    |**监听名称**|设置监听的名称，用户自定义。|
     |**获取真实IP**|针对四层监听，后端服务器可直接获得来访者的真实IP，无需采用其它手段获取。|
     |**创建完毕自动启动监听**|是否在监听配置完成后启动负载均衡监听，默认开启。|
 
 2.  单击**下一步**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/7421_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877421_zh-CN.png)
 
 
 ## 步骤三 添加后端服务器 {#section_vqk_zmn_42b .section}
@@ -90,11 +94,11 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
 1.  选择**默认服务器组**，单击**添加**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208710030_zh-CN.png)
 
-2.  选择要添加的ECS实例，然后单击**加入待添加篮子**。单击**确定**。
+2.  选择要添加的ECS实例，然后单击**加入待添加篮**。单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/7499_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877499_zh-CN.png)
 
 3.  配置添加的后端服务器的端口和权重。
     -   端口
@@ -107,7 +111,7 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
         **说明：** 权重设置为0，该服务器不会再接受新请求。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/7504_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877504_zh-CN.png)
 
 4.  单击**下一步**。
 
@@ -115,21 +119,22 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
 负载均衡通过健康检查来判断后端服务器（ECS实例）的业务可用性。健康检查机制提高了前端业务整体可用性，避免了后端ECS异常对总体服务的影响。单击**修改**更改健康检查配置，详情参见[配置健康检查](cn.zh-CN/用户指南（新版控制台）/健康检查/配置健康检查.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7416_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810032_zh-CN.png)
 
 ## 步骤五 提交配置 {#section_hwm_qnn_42b .section}
 
 完成以下操作，确认监听配置：
 
-1.  在审核提交页面，检查监听配置，您可以单击**修改**更改配置。确认无误后，单击**提交**。
-2.  在配置审核页面，在配置成功后，单击**确定**。
+1.  在配置审核页面，检查监听配置，您可以单击**修改**更改配置。
+2.  确认无误后，单击**提交**。
+3.  在配置审核页面，配置成功后，单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7417_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810033_zh-CN.png)
 
 
 配置成功后，您可以在监听页面查看已创建的监听。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/7418_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810034_zh-CN.png)
 
 ## 相关操作 {#section_or1_14n_42b .section}
 
