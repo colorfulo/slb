@@ -43,16 +43,23 @@
 |LoadBalancerSpec|String|负载均衡实例的的性能规格。如果取值为空，则代表是性能共享型实例。
 
 |
+|EndTimeStamp|String|负载均衡实例结束时间戳。|
+|InternetChargeType|String|网络计费类型。|
+|PayType|String|实例付费类型。|
+|ResourceGroupId|String|资源组ID。|
 
 |名称|类型|描述|
 |:-|:-|:-|
-|ListenerPort|String|负载均衡实例前端使用的端口。|
-|ListenerProtocol|Integer|负载均衡实例前端使用的协议。|
+|ListenerPort|Integer|负载均衡实例前端使用的端口。|
+|ListenerProtocol|String|负载均衡实例前端使用的协议。|
+|listenerForward|String|是否启用监听转发。|
+|forwardPort|Integer|转发到的目的监听端口，必须是已经存在的HTTPS监听端口。|
 
 |名称|类型|描述|
 |:-|:-|:-|
 |ServerId|String|后端服务器名（ECS实例）ID。|
 |Weight|Integer|后端服务器的权重。|
+|type|String|后端服务器类型。|
 
 ## 示例 {#section_oxr_pds_cz .section}
 
