@@ -2,6 +2,10 @@
 
 性能保障型负载均衡实例在创建HTTPS监听时，支持选择使用的TLS安全策略。
 
+您可以在添加HTTPS监听，配置**协议&监听**的高级配置时，选择TLS安全策略，详细操作参见[添加HTTPS监听](cn.zh-CN/用户指南（新版控制台）/监听/添加HTTPS监听.md#)。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21323/153675530411859_zh-CN.png)
+
 TLS安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。
 
 ## TLS安全策略 {#section_vzd_jdv_cfb .section}
