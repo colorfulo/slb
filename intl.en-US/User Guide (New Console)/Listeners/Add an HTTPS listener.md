@@ -4,7 +4,7 @@ It is applicable to applications requiring encrypted transmission. You can add a
 
 ## Prerequisites {#section_tx3_vqn_42b .section}
 
-[Create an SLB instance](reseller.en-US/User Guide (New Console)/Server Load Balancer instance/Create an SLB instance.md#).
+[Create an SLB instance](intl.en-US/User Guide (New Console)/Server Load Balancer instance/Create an SLB instance.md#).
 
 ## Step 1 Open the listener configuration wizard {#section_wx3_5qn_42b .section}
 
@@ -17,7 +17,7 @@ To open the listener configuration wizard, complete these steps:
     -   On the Server Load Balancer page, find the target instance and then click **Configure Listener**.
     -   On the Server Load Balancer page, click the ID of the target SLB instance. On the Listeners page, click **Add Listener**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368369467399_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368410817399_en-US.png)
 
 
 ## Step 2 Configure a UDP listener {#section_ly4_2pn_42b .section}
@@ -53,7 +53,7 @@ SLB adds a cookie to the first response from the backend server \(insert SERVERI
 
     -   **Rewrite cookie**: You can set the cookie to insert to the HTTP/HTTPS response according to your needs. You must maintain the timeout period and lifecycle of the cookie on the backend server.
 
-SLB will overwrite the original cookie when it discovers that a new cookie is set. The next time the client carries the new cookie to access SLB, the listener will distribute the request to the recorded backend server. For more information, see [Session persistence](../../../../reseller.en-US/Best Practices/Configure cookie in the backend server.md#).
+SLB will overwrite the original cookie when it discovers that a new cookie is set. The next time the client carries the new cookie to access SLB, the listener will distribute the request to the recorded backend server. For more information, see [Session persistence](../../../../intl.en-US/Best Practices/Configure cookie in the backend server.md#).
 
  |
     |**Enable HTTP2.0**|Select whether to enable HTTP 2.0.|
@@ -69,7 +69,7 @@ Enabling whitelist poses some business risks.  After a whitelist is configured,
 If you enable a blacklist without adding any IP entry in the corresponding access control list, all requests are forwarded.
 
  |
-    |**Access Control List**|Select an access control list as the whitelist or the blacklist.**Note:** An IPv6 instance can only bind IPv6 access control lists and an IPv4 instance can only bind IPv4 access control lists. For more information, see [Configure an access control list](reseller.en-US/User Guide/Access control/Configure an access control list.md#).
+    |**Access Control List**|Select an access control list as the whitelist or the blacklist.**Note:** An IPv6 instance can only bind IPv6 access control lists and an IPv4 instance can only bind IPv4 access control lists. For more information, see [Configure an access control list](intl.en-US/User Guide/Access control/Configure an access control list.md#).
 
 |
     |**Enable Peak Bandwidth Limit**| Select whether to configure the listening bandwidth.
@@ -109,7 +109,7 @@ This function is available in all regions.
 
 2.  Click **Next**.
 
-    ![](images/10035_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153684108110035_en-US.png)
 
 
 ## Step 3 Configure the SSL certificate {#section_m52_pxn_42b .section}
@@ -136,10 +136,10 @@ To add an HTTPS listener, you must upload a server certificate or CA certificate
 
 Note the following before uploading certificates:
 
--   The uploaded certificate must be in the PEM format. For more information, see [Certificate requirements](reseller.en-US/User Guide (New Console)/Certificate management/Certificate requirements.md#). 
+-   The uploaded certificate must be in the PEM format. For more information, see [Certificate requirements](intl.en-US/User Guide (New Console)/Certificate management/Certificate requirements.md#). 
 -   After the certificate is uploaded to SLB, SLB can manage the certificate and you do not need to bind the certificate on backend ECS instances.
 -   It usually takes one to three minutes to activate the HTTPS listener because the uploading, loading, and validation of certificates take some time. Normally it takes effect in one minute and it will definitely take effect in three minutes.
--   The ECDHE algorithm cluster used by HTTPS listeners supports forward secrecy, but does not support uploading security enhancement parameter files required by the DHE algorithm cluster, such as strings containing the `BEGIN DH PARAMETERS` field in the PEM certificate file. For more information, see [Certificate formats](reseller.en-US/User Guide/Certificate management/Certificate requirements.md#).
+-   The ECDHE algorithm cluster used by HTTPS listeners supports forward secrecy, but does not support uploading security enhancement parameter files required by the DHE algorithm cluster, such as strings containing the `BEGIN DH PARAMETERS` field in the PEM certificate file. For more information, see [Certificate formats](intl.en-US/User Guide/Certificate management/Certificate requirements.md#).
 -   Currently, Server Load Balancer HTTPS listeners do not support SNI \(Server Name Indication\). You can use TCP listeners instead, and then configure SNI on the backend ECS instances.
 -   The session ticket retention time of HTTPS listeners is 300 seconds.
 -   The actual amount of traffic is larger than the billed traffic amount because some traffic is used for the protocol handshaking.
@@ -149,30 +149,30 @@ To configure the SSL certificate, complete these steps:
 
 1.  Select the server certificate that has been uploaded, or click **Create Server Certificate** to upload a server certificate.
 
-    For more information, see [Upload a certificate](reseller.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#). 
+    For more information, see [Upload a certificate](intl.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#). 
 
 2.  If you want to enable HTTPS mutual authentication, click **Modify** and enable mutual authentication.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/15368369469566_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/15368410819566_en-US.png)
 
 3.  Select an uploaded CA certificate, or click **Create CA Certificate** to upload a CA certificate.
 
-    You can use a self-signed CA certificate. For more information, see [Generate a CA certificate](reseller.en-US/User Guide (New Console)/Certificate management/Generate a CA certificate.md#).
+    You can use a self-signed CA certificate. For more information, see [Generate a CA certificate](intl.en-US/User Guide (New Console)/Certificate management/Generate a CA certificate.md#).
 
 
 ## Step 4 Add backend servers {#section_vqk_zmn_42b .section}
 
-Add backend servers to process requests. You can use the default server group configured for the instance, or configure a VServer group or an active/standby server group for the listener. For more information, see [Backend server overview](reseller.en-US/User Guide (New Console)/Backend servers/Backend server overview.md#). 
+Add backend servers to process requests. You can use the default server group configured for the instance, or configure a VServer group or an active/standby server group for the listener. For more information, see [Backend server overview](intl.en-US/User Guide (New Console)/Backend servers/Backend server overview.md#). 
 
 In this tutorial, the default server group is used:
 
 1.  Select **Default Server Group** and then click **Add**.
 
-    ![](images/10036_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153684108110036_en-US.png)
 
 2.  Select the ECS instances to add and then click **Add to Selected Server List**. Click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368369477499_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368410817499_en-US.png)
 
 3.  Configure the ports and weights of the added backend servers.
     -   Port
@@ -185,15 +185,15 @@ In this tutorial, the default server group is used:
 
         **Note:** If the weight is set to 0, no requests will be sent to the ECS instance.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368369477504_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368410817504_en-US.png)
 
 4.  Click **Next**.
 
 ## Step 5 Configure health check {#section_oj3_mnn_42b .section}
 
-Server Load Balancer checks the service availability of the backend servers \(ECS instances\) by performing health checks. The health check function improves the overall availability of your services and avoids the impact of backend server failures. Click **Modify** to change health check configurations. For more information, see [Configure health check](reseller.en-US/User Guide (New Console)/Health check/Configure health check.md#).
+Server Load Balancer checks the service availability of the backend servers \(ECS instances\) by performing health checks. The health check function improves the overall availability of your services and avoids the impact of backend server failures. Click **Modify** to change health check configurations. For more information, see [Configure health check](intl.en-US/User Guide (New Console)/Health check/Configure health check.md#).
 
-![](images/10037_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153684108110037_en-US.png)
 
 ## Step 6 Submit the configurations {#section_hwm_qnn_42b .section}
 
@@ -202,22 +202,22 @@ To confirm the listener configurations, complete these steps:
 1.  On the Submit page, check listener configurations. You can click **Modify** the change the configurations. Click **Submit**.
 2.  On the Submit page, click **OK** after the configurations are successful.
 
-    ![](images/10038_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153684108110038_en-US.png)
 
 
 After the configurations are successful, you can view the created listener on the listeners page.
 
-![](images/10039_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153684108110039_en-US.png)
 
 ## Related operations {#section_pz4_2pn_42b .section}
 
--   [Configure health check](reseller.en-US/User Guide (New Console)/Health check/Configure health check.md#)
--   [Manage a default server group](reseller.en-US/User Guide (New Console)/Backend servers/Manage a default server group.md#)
--   [Manage a VServer group](reseller.en-US/User Guide (New Console)/Backend servers/Manage a VServer group.md#)
--   [Manage an active/standby server group](reseller.en-US/User Guide (New Console)/Backend servers/Manage an active/standby server group.md#)
--   [Generate a CA certificate](reseller.en-US/User Guide (New Console)/Certificate management/Generate a CA certificate.md#)
--   [Upload a certificate](reseller.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#)
--   [Configure access control](reseller.en-US/User Guide (New Console)/Access control/Configure access control.md#)
--   [Add domain-name based or URL-based forwarding rules](reseller.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#)
--   [Manage a domain name extension](reseller.en-US/User Guide (New Console)/Listeners/Domain name extension (Beta)/Manage a domain name extension.md#)
+-   [Configure health check](intl.en-US/User Guide (New Console)/Health check/Configure health check.md#)
+-   [Manage a default server group](intl.en-US/User Guide (New Console)/Backend servers/Manage a default server group.md#)
+-   [Manage a VServer group](intl.en-US/User Guide (New Console)/Backend servers/Manage a VServer group.md#)
+-   [Manage an active/standby server group](intl.en-US/User Guide (New Console)/Backend servers/Manage an active/standby server group.md#)
+-   [Generate a CA certificate](intl.en-US/User Guide (New Console)/Certificate management/Generate a CA certificate.md#)
+-   [Upload a certificate](intl.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#)
+-   [Configure access control](intl.en-US/User Guide (New Console)/Access control/Configure access control.md#)
+-   [Add domain-name based or URL-based forwarding rules](intl.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#)
+-   [Manage a domain name extension](intl.en-US/User Guide (New Console)/Listeners/Domain name extension (Beta)/Manage a domain name extension.md#)
 
