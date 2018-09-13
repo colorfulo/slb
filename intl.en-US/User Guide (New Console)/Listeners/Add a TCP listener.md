@@ -17,7 +17,7 @@ To open the listener configuration wizard, complete these steps:
     -   On the Server Load Balancer page, find the target instance and then click **Configure Listener**.
     -   On the Server Load Balancer page, click the ID of the target SLB instance. On the Listeners page, click **Add Listener**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368349587399_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368352497399_en-US.png)
 
 
 ## Step 2 Configure a TCP listener {#section_mhj_lmn_42b .section}
@@ -66,9 +66,9 @@ If you enable a blacklist without adding any IP entry in the corresponding acces
 |
     |**Enable Peak Bandwidth Limit**| Select whether to configure the listening bandwidth.
 
- 对于按带宽计费的负载均衡实例，您可以针对不同监听设定不同的带宽峰值来限定监听的流量。 实例下所有监听的带宽峰值总和不能超过该实例的带宽。
+ If the SLB instance is billed by bandwidth, you can set different peak bandwidths for different listeners to limit the traffic passing through the listeners. The sum of the peak bandwidths of all listeners under an instance cannot exceed the bandwidth of that instance.
 
- 默认不开启，各监听共享实例的总带宽。
+ By default, all listeners share the bandwidth of the SLB instance.
 
  **Note:** Instances billed by traffic have no peak bandwidth limit by default.
 
@@ -80,7 +80,7 @@ If you enable a blacklist without adding any IP entry in the corresponding acces
 
 2.  Click **Next**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368349587421_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368352497421_en-US.png)
 
 
 ## Step 3 Add backend servers {#section_vqk_zmn_42b .section}
@@ -91,11 +91,11 @@ In this tutorial, the default server group is used:
 
 1.  Select **Default Server Group** and then click **Add**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683495810030_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683524910030_en-US.png)
 
 2.  Select the ECS instances to add and then click **Add to Selected Server List**. Click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368349587499_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368352497499_en-US.png)
 
 3.  Configure the ports and weights of the added backend servers.
     -   Port
@@ -108,7 +108,7 @@ In this tutorial, the default server group is used:
 
         **Note:** If the weight is set to 0, no requests will be sent to the ECS instance.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368349587504_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368352497504_en-US.png)
 
 4.  Click **Next**.
 
@@ -116,7 +116,7 @@ In this tutorial, the default server group is used:
 
 Server Load Balancer checks the service availability of the backend servers \(ECS instances\) by performing health checks. The health check function improves the overall availability of your services and avoids the impact of backend server failures. Click **Modify** to change health check configurations. For more information, see [Configure health check](reseller.en-US/User Guide (New Console)/Health check/Configure health check.md#).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683495810032_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683524910032_en-US.png)
 
 ## Step 5 Submit the configurations {#section_hwm_qnn_42b .section}
 
@@ -126,12 +126,12 @@ To confirm the listener configurations, complete these steps:
 2.  Click **Submit**.
 3.  On the Submit page, click **OK** after the configurations are successful.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683495910033_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683524910033_en-US.png)
 
 
 After the configurations are successful, you can view the created listener on the Listeners page.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683495910034_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153683524910034_en-US.png)
 
 ## Related operations {#section_or1_14n_42b .section}
 
