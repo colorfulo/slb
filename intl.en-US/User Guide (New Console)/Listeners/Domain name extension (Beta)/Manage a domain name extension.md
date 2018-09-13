@@ -12,13 +12,13 @@ The domain name extension function is available in all regions.
 
 ## Add a domain name extension {#section_ykj_pvb_wdb .section}
 
-1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
+1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
 2.  Select a region.
 3.  Click the ID of the SLB instance.
 4.  In the left-side navigation pane, click **Listeners**.
 5.  On the Listeners page, find the created HTTPS listener, and then click **More** \> **Additional Domains**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15353634287466_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368420747466_en-US.png)
 
 6.  Click **Add Additional Domain** and configure the domain name:
     1.  Enter the domain name. The domain name can only contain letters, numbers, dashes, or dots.
@@ -44,11 +44,11 @@ The domain name extension function is available in all regions.
 
     3.  Click **OK**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15353634287467_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368420747467_en-US.png)
 
 7.  On the Listeners page, find the created HTTPS listener and click **Add Forwarding Rules**.
 8.  On the Forwarding Rules page, click **Add Forwarding Rules**.
-9.  For more information, see [Add domain-name based or URL-based forwarding rules](intl.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#).
+9.  For more information, see [Add domain-name based or URL-based forwarding rules](reseller.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#).
 
     **Note:** Make sure that the domain name configured in the forwarding rule is the same as the added domain name extension.
 
@@ -59,7 +59,7 @@ You can replace the certificate used by an added domain name extension.
 
 To edit a domain name extension, complete these steps:
 
-1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
+1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
 2.  Select a region and all SLB instance in this region are displayed.
 3.  Click the ID of the SLB instance.
 4.  In the left-side navigation pane, click **Listeners**.
@@ -67,21 +67,21 @@ To edit a domain name extension, complete these steps:
 6.  Find the target domain name extension and then click **Edit**.
 7.  In the Edit Additional Domain dialog box, select a new certificate and then click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15353634287468_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368420747468_en-US.png)
 
 
 ## Delete a domain name extension {#section_htc_j1p_42b .section}
 
 To delete a domain name extension, complete these steps:
 
-1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
+1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
 2.  Select a region and all SLB instance in this region are displayed.
 3.  Click the ID of the SLB instance.
 4.  In the left-side navigation pane, click **Listeners**.
 5.  On the Listeners page, find the created HTTPS listener, and then click **More** \> **Additional Domains**.
 6.  Find the target domain name extension and then click **Remove**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15353634297469_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368420747469_en-US.png)
 
 7.  In the displayed dialog box, click **OK**.
 
