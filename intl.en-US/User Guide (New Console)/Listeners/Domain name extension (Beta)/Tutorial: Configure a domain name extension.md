@@ -20,7 +20,7 @@ To achieve this, complete the following tasks:
     -   By default, the listener uses the certificate named as default.
     -   Upload a certificate \(example1\) for domain \* .example1.com to use.
     -   Upload a certificate \(example2\) for domain www.example2.com to use.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368417688320_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368427178320_en-US.png)
 
 
 ## Step 1 Add an HTTPS listener {#section_s3n_qpt_q2b .section}
@@ -64,7 +64,7 @@ To add a domain name extension, complete these steps:
 1.  Click the ID of the SLB1 instance to enter the Instance Details page.
 2.  In the Listeners tab, find the created HTTPS listener, select **More** \> **Additional Domains**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684176810044_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684271710044_en-US.png)
 
 3.  On the Additional Domains page, click **Add Additional Domain** to add a domain name extension.
 
@@ -89,7 +89,7 @@ To add a domain name extension, complete these steps:
 
         **Note:** The domain in the certificate must be the same as the added domain name extension.
 
-    ![](images/8324_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684271711910_en-US.png)
 
 
 **Note:** After the configuration is complete, if there is a problem, restart the browser to avoid the impact of the cache on the results.
