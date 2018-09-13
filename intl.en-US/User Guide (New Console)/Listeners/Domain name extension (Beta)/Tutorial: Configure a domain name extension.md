@@ -14,13 +14,13 @@ To achieve this, complete the following tasks:
 
 ## Prerequisites {#section_krq_z4t_q2b .section}
 
--   Create a guaranteed-performance SLB1 instance in China \(Hangzhou\). For more information, see [Create an SLB instance](reseller.en-US/User Guide (New Console)/Server Load Balancer instance/Create an SLB instance.md#).
--   Upload the certificate required in this tutorial. For more information, see [Upload a certificate](reseller.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#).
+-   Create a guaranteed-performance SLB1 instance in China \(Hangzhou\). For more information, see [Create an SLB instance](intl.en-US/User Guide (New Console)/Server Load Balancer instance/Create an SLB instance.md#).
+-   Upload the certificate required in this tutorial. For more information, see [Upload a certificate](intl.en-US/User Guide (New Console)/Certificate management/Upload a certificate.md#).
 
     -   By default, the listener uses the certificate named as default.
     -   Upload a certificate \(example1\) for domain \* .example1.com to use.
     -   Upload a certificate \(example2\) for domain www.example2.com to use.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368427178320_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368431958320_en-US.png)
 
 
 ## Step 1 Add an HTTPS listener {#section_s3n_qpt_q2b .section}
@@ -34,7 +34,7 @@ To add an HTTPS listener, complete these steps:
 
 3.  Configure the listener.
 
-    The configurations used in this tutorial are as follows. For more information, see [Add an HTTPS listener](reseller.en-US/User Guide (New Console)/Listeners/Add an HTTPS listener.md#).
+    The configurations used in this tutorial are as follows. For more information, see [Add an HTTPS listener](intl.en-US/User Guide (New Console)/Listeners/Add an HTTPS listener.md#).
 
     -   Mutual Authentication: Disable.
     -   SSL Certificate: Select the uploaded server certificate.
@@ -46,15 +46,15 @@ To configure forwarding rules, complete these steps:
 
 1.  Click the ID of the SLB1 instance to enter the Instance Details page.
 2.  In the Listeners tab, find the created HTTPS listener and click **Add Forwarding Rules**.
-3.  On the Add Forwarding Rules page, configure forwarding rules. For more information, see [Add domain-name based or URL-based forwarding rules](reseller.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#).
+3.  On the Add Forwarding Rules page, configure forwarding rules. For more information, see [Add domain-name based or URL-based forwarding rules](intl.en-US/User Guide (New Console)/Listeners/Add domain-name based or URL-based forwarding rules.md#).
 
     In this tutorial, three domain forwarding rules are configured and URLs are left empty.
 
     -   Set a rule name, and then enter \* .example1.com in the **Domain Name** column, select the VServer group test1 and click **Add Forwarding Rules**.
     -   Set a rule name, and then enter www.example2.com in the **Domain Name** column, select the VServer group test2 and click **OK**.
-    **Note:** The domains configured in the forwarding rules must be the same as the domains added in the certificate and [Step 3. Add a domain name extension](reseller.en-US/User Guide (New Console)/Listeners/Domain name extension (Beta)/Tutorial: Configure a domain name extension.md#section_bk4_ypt_q2b).
+    **Note:** The domains configured in the forwarding rules must be the same as the domains added in the certificate and [Step 3. Add a domain name extension](intl.en-US/User Guide (New Console)/Listeners/Domain name extension (Beta)/Tutorial: Configure a domain name extension.md#section_bk4_ypt_q2b).
 
-    ![](images/8327_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319511911_en-US.png)
 
 
 ## Step 3. Add a domain name extension {#section_bk4_ypt_q2b .section}
@@ -64,7 +64,7 @@ To add a domain name extension, complete these steps:
 1.  Click the ID of the SLB1 instance to enter the Instance Details page.
 2.  In the Listeners tab, find the created HTTPS listener, select **More** \> **Additional Domains**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684271710044_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319510044_en-US.png)
 
 3.  On the Additional Domains page, click **Add Additional Domain** to add a domain name extension.
 
@@ -89,7 +89,7 @@ To add a domain name extension, complete these steps:
 
         **Note:** The domain in the certificate must be the same as the added domain name extension.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684271711910_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319511910_en-US.png)
 
 
 **Note:** After the configuration is complete, if there is a problem, restart the browser to avoid the impact of the cache on the results.
