@@ -20,7 +20,7 @@
 |AclId|String|是|访问控制策略组ID。|
 |AclEntrys|String|否| 访问控制策略组中要添加的IP条目，可以指定IP地址或IP地址段（CIDR block），多个IP地址/地址段之间用逗号隔开。比如：
 
- \[\{“entry”:”10.0.0.1”,”comment”:”条目1”\},\{“entry”:”192.168.0.0/16”,”comment”:”条目2”\}\]
+ \[\{“entry”:”10.0.0.1/24”,”comment”:”条目1”\},\{“entry”:”192.168.0.0/16”,”comment”:”条目2”\}\]
 
  **说明：** 每次最多可添加50个条目。
 
@@ -40,7 +40,7 @@
 https://slb.aliyuncs.com/?Action=AddAccessControlListEntry
 &RegionId=us-west-1
 &AclId=acl-rj9xpxzcwxrukois65yw3
-&AclEntrys=[{"entry":"10.0.0.1","comment":"条目1"},{"entry":"192.168.0.0/16","comment":"条目2"}]
+&AclEntrys=[{"entry":"10.0.0.1/24","comment":"条目1"},{"entry":"192.168.0.0/16","comment":"条目2"}]
 &公共请求参数
 ```
 
