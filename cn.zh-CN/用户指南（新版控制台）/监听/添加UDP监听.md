@@ -31,11 +31,11 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 4.  选择以下一种方法，打开监听配置向导：
     -   在实例管理页面，找到目标实例，然后单击**添加配置向导**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560210510004_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153689173610004_zh-CN.png)
 
     -   在实例管理页面，单击目标实例ID。在监听页面，单击**添加监听**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15356021057399_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368917367399_zh-CN.png)
 
 
 ## 步骤二 配置协议监听 {#section_ly4_2pn_42b .section}
@@ -94,7 +94,7 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 
 2.  单击**下一步**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15356021057426_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15368917367426_zh-CN.png)
 
 
 ## 步骤三 添加后端服务器 {#section_ylm_3qn_42b .section}
@@ -105,11 +105,11 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 
 1.  选择**默认服务器组**，单击**添加**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560210510030_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153689173610030_zh-CN.png)
 
 2.  选择要添加的ECS实例，然后单击**加入待添加篮**。单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356021057499_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368917367499_zh-CN.png)
 
 3.  配置添加的后端服务器的端口和权重。
     -   端口
@@ -122,7 +122,7 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 
         **说明：** 权重设置为0，该服务器不会再接受新请求。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356021057504_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15368917367504_zh-CN.png)
 
 4.  单击**下一步**。
 
@@ -130,7 +130,7 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 
 负载均衡通过健康检查来判断后端服务器（ECS实例）的业务可用性。健康检查机制提高了前端业务整体可用性，避免了后端ECS异常对总体服务的影响。单击**修改**更改健康检查配置，详情参见[配置健康检查](cn.zh-CN/用户指南（新版控制台）/健康检查/配置健康检查.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560210610032_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153689173610032_zh-CN.png)
 
 ## 步骤五 提交配置 {#section_ey5_lqn_42b .section}
 
@@ -140,12 +140,12 @@ UDP协议多用于关注实时性而相对不注重可靠性的场景，如视�
 2.  确认无误后，单击**提交**。
 3.  在配置审核页面，配置成功后，单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560210610033_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153689173610033_zh-CN.png)
 
 
 配置成功后，您可以在监听页面查看已创建的监听。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560210610034_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153689173710034_zh-CN.png)
 
 ## 相关操作 {#section_pz4_2pn_42b .section}
 
