@@ -17,11 +17,11 @@ To add ECS instances, complete these steps:
 4.  Click the Default Server Group tab.
 5.  Click **Add**. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/15368894357365_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/15368904987365_en-US.png)
 
 6.  On the Available Servers page, find the target ECS instance and click **Add**, or click multiple target ECS instances and click **Add to Selected Server List** at the bottom of the page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/15368894357367_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/15368904987367_en-US.png)
 
 7.  Click **OK**.
 8.  In the Available Servers dialog box, specify the weights of ECS instances and click **OK**.
@@ -32,11 +32,11 @@ To add ECS instances, complete these steps:
 
     You can modify the ports and weights of added servers in batches.
 
-    -   Click ![](images/11116_en-US.png): Duplicate to below. If you modify the weight of the current server, the weights of all servers blow are also changed.
-    -   Click ![](images/11119_en-US.png): Duplicate to above. If you modify the weight of the current server, the weights of all servers above are also changed.
-    -   Click ![](images/11120_en-US.png): Duplicate to all. If you modify the weight of the current server, the weights of all servers in the default server group are also changed.
-    -   Click ![](images/11121_en-US.png): Clear all. If you clear the weight of the current server, the weights of all servers in the default server group are also cleared.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153688943511124_en-US.png)
+    -   Click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153689049811922_en-US.png): Duplicate to below. If you modify the weight of the current server, the weights of all servers blow are also changed.
+    -   Click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153689049811921_en-US.png): Duplicate to above. If you modify the weight of the current server, the weights of all servers above are also changed.
+    -   Click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153689049911923_en-US.png): Duplicate to all. If you modify the weight of the current server, the weights of all servers in the default server group are also changed.
+    -   Click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153689049911924_en-US.png): Clear all. If you clear the weight of the current server, the weights of all servers in the default server group are also cleared.
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/153689049911124_en-US.png)
 
 9.  Click **OK**.
 
@@ -50,7 +50,7 @@ To edit the weight of a backend server, complete these steps:
 4.  Click the Default Server Group tab.
 5.  Hover the mouse to the weight area of the target backend server, and then click the displayed pencil icon.
 
-    ![](images/7470_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15669/15368904997471_en-US.png)
 
 6.  Modify the weight and then click **OK**.
 
