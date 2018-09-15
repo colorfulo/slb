@@ -2,7 +2,16 @@
 
 SLB supports configuring domain-name based or URL based forwarding rules. You can forward requests with different domain names or URLs to different backend servers by adding forwarding rules so as to well allocate server resources.
 
-**Note:** Only HTTP and HTTPS listeners support configuring forwarding rules.
+**Note:** Only Layer-7 \(HTTP and HTTPS \) listeners and the following regions support configuring forwarding rules:
+
+-   China \(Beijing\)
+-   China \(Hangzhou\)
+-   China \(Shanghai\)
+-   China \(Zhangjiakou\)
+-   China \(Hohhot\)
+-   China \(Hong Kong\)
+-   Singapore
+-   Japan \(Tokyo\)
 
 ## Introduction to domain-name based or URL-based forwarding rules {#section_hll_n31_wdb .section}
 
@@ -34,24 +43,24 @@ After forwarding rules are configured, the sequence of request forwarding is as 
 -   If not, but the listener is associated with a VServer group, the requests are distributed to the VServer group configured in the listener.
 -   If none of the above conditions are met, the requests are forwarded to ECS instances in the default server group.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4135/15368930062798_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4135/15369993622798_en-US.png)
 
 ## Add a domain-name based or URL-based forwarding rule {#section_z1n_t1b_wdb .section}
 
 Before adding the forwarding rule, make sure that the following conditions are met:
 
--   [Add an HTTP listener](reseller.en-US/User Guide (New Console)/Listeners/Add an HTTP listener.md#) or  [Add an HTTPS listener](reseller.en-US/User Guide (New Console)/Listeners/Add an HTTPS listener.md#).
--   [Manage a VServer group](reseller.en-US/User Guide (New Console)/Backend servers/Manage a VServer group.md#).
+-   [Add an HTTP listener](intl.en-US/User Guide (New Console)/Listeners/Add an HTTP listener.md#) or  [Add an HTTPS listener](intl.en-US/User Guide (New Console)/Listeners/Add an HTTPS listener.md#).
+-   [Manage a VServer group](intl.en-US/User Guide (New Console)/Backend servers/Manage a VServer group.md#).
 
 To add a domain-name based or URL-based forwarding rule, complete these steps:
 
-1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
+1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
 2.  Select a region and all SLB instance in this region are displayed.
 3.  Click the ID of the target SLB instance.
 4.  Click the Listeners tab.
 5.  Find the target HTTP/HTTPS listener and then click the **Add Forwarding Rules** option.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15368930067453_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15369993627453_en-US.png)
 
 6.  On the Add Forwarding Rules page, click **Add Forwarding Rules**.
 7.  On the Add Forwarding Rules page, configure the forwarding rule according to the following information:
@@ -64,7 +73,7 @@ To add a domain-name based or URL-based forwarding rule, complete these steps:
     3.  **VServer Group**: Select the associated VServer group.
     4.  **Description \(optional\)**: Enter the description.
     5.  Click **OK**.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15368930067463_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15369993627463_en-US.png)
 
 8.  Click **Add Domain** or **Add Rule** to add another domain name based or URL based forwarding rule.
 
@@ -77,14 +86,14 @@ You can change backend servers associated with the forwarding rule.
 
 To edit a forwarding rule, complete these steps:
 
-1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
+1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
 2.  Select a region and all SLB instance in this region are displayed.
 3.  Click the ID of the target SLB instance.
 4.  Click the Listeners tab.
 5.  Find the target Layer-7 listener and then click the **Add Forwarding Rules** option.
 6.  In the **Forwarding Rules** area, find the target forwarding rule and then click the **Edit** option.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15368930067464_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15369993627464_en-US.png)
 
 7.  Select a new VServer group to be associated with the forwarding rule, and then click **OK**.
 
@@ -92,13 +101,13 @@ To edit a forwarding rule, complete these steps:
 
 To delete a forwarding rule, complete these steps:
 
-1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
+1.  Log on to the [SLB console](https://slb.console.aliyun.com/slb).
 2.  Select a region and all SLB instance in this region are displayed.
 3.  Click the ID of the target SLB instance.
 4.  Click the Listeners tab.
 5.  Find the target Layer-7 listener, and then click the **Add Forwarding Rules** option.
 6.  In the **Forwarding Rules** area, find the target forwarding rule and then click the **Delete** option.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15368930067465_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15369993627465_en-US.png)
 
 
