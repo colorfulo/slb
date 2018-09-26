@@ -20,7 +20,7 @@ To achieve this, complete the following tasks:
     -   By default, the listener uses the certificate named as default.
     -   Upload a certificate \(example1\) for domain \* .example1.com to use.
     -   Upload a certificate \(example2\) for domain www.example2.com to use.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15368431958320_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15661/15379393868320_en-US.png)
 
 
 ## Step 1 Add an HTTPS listener {#section_s3n_qpt_q2b .section}
@@ -54,7 +54,7 @@ To configure forwarding rules, complete these steps:
     -   Set a rule name, and then enter www.example2.com in the **Domain Name** column, select the VServer group test2 and click **OK**.
     **Note:** The domains configured in the forwarding rules must be the same as the domains added in the certificate and [Step 3. Add a domain name extension](intl.en-US/User Guide (New Console)/Listeners/Domain name extension (Beta)/Tutorial: Configure a domain name extension.md#section_bk4_ypt_q2b).
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319511911_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153793938611911_en-US.png)
 
 
 ## Step 3. Add a domain name extension {#section_bk4_ypt_q2b .section}
@@ -64,7 +64,7 @@ To add a domain name extension, complete these steps:
 1.  Click the ID of the SLB1 instance to enter the Instance Details page.
 2.  In the Listeners tab, find the created HTTPS listener, select **More** \> **Additional Domains**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319510044_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153793938610044_en-US.png)
 
 3.  On the Additional Domains page, click **Add Additional Domain** to add a domain name extension.
 
@@ -89,7 +89,7 @@ To add a domain name extension, complete these steps:
 
         **Note:** The domain in the certificate must be the same as the added domain name extension.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153684319511910_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17020/153793938611910_en-US.png)
 
 
 **Note:** After the configuration is complete, if there is a problem, restart the browser to avoid the impact of the cache on the results.
