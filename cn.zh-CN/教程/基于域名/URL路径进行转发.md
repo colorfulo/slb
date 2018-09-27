@@ -34,13 +34,13 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
 -   如果未匹配，而对应监听启用并配置了虚拟服务器组，则将请求转发到对应的虚拟服务器组。
 -   如果均未匹配，则转发到负载均衡实例默认服务器组中的ECS。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4135/15380130042798_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4135/15380147932798_zh-CN.png)
 
 ## 添加域名和路径转发策略 {#section_z1n_t1b_wdb .section}
 
 在配置域名和路径转发策略前，确保您已经：
 
--   [ZH-CN\_TP\_15654\_V2.md\#](cn.zh-CN/用户指南（新版控制台）/监听/添加HTTP监听.md#)或[ZH-CN\_TP\_15653\_V2.md\#](cn.zh-CN/用户指南（新版控制台）/监听/添加HTTPS监听.md#)。
+-   [添加HTTP监听](../cn.zh-CN/用户指南（新版控制台）/监听/添加HTTP监听.md#)或[添加HTTPS监听](../cn.zh-CN/用户指南（新版控制台）/监听/添加HTTPS监听.md#)。
 -   [创建虚拟服务器组](cn.zh-CN/用户指南（旧版，即将下线）/后端服务器/创建虚拟服务器组.md#)。
 
 完成以下步骤，配置基于域名和路径的转发策略：
@@ -51,7 +51,7 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
 4.  选择监听页签。
 5.  单击目标七层监听的**添加转发策略**选项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380130047453_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380147937453_zh-CN.png)
 
 6.  在转发策略页面，单击**添加转发策略**。
 7.  在添加转发策略页面，根据以下信息配置转发策略：
@@ -64,7 +64,7 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
     3.  **虚拟服务器组**：选择关联的虚拟服务器组。
     4.  **备注（可选）**：输入描述。
     5.  单击**确定**。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380130047463_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380147937463_zh-CN.png)
 
 8.  单击**添加域名**或**添加策略**再添加一个域名或URL策略。
 
@@ -84,7 +84,7 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
 5.  单击目标七层监听的**添加转发策略**选项。
 6.  在**转发策略列表**区域，单击目标转发策略的**编辑**选项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380130047464_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380147937464_zh-CN.png)
 
 7.  编辑转发策略，根据以下信息自定义转发策略的调度算法、会话保持和健康检查等配置。
 
@@ -144,7 +144,7 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
 
  |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/153801300411504_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/153801479311504_zh-CN.png)
 
 8.  单击**确定**。
 
@@ -159,6 +159,6 @@ URL转发支持字符串匹配，按照顺序匹配原则，比如 /admin、/bbs
 5.  单击目标七层监听的**添加转发策略**选项。
 6.  在**转发策略列表**区域，单击目标转发策略的**删除**选项。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380130047465_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15660/15380147937465_zh-CN.png)
 
 
