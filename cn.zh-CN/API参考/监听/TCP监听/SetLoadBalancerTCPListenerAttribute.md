@@ -35,13 +35,11 @@
 |
 |PersistenceTimeout|Integer|否|会话保持的超时时间。取值：0-3600（秒）
 
-默认值为0，关闭会话保持。
-
 |
 |EstablishedTimeout|Integer|否|连接超时时间。取值：10-900（秒）
 
 |
-|AclStatus|String|否|是否开启访问控制功能。取值：on | off（默认值）
+|AclStatus|String|否|是否开启访问控制功能。取值：on | off
 
 |
 |AclType|String|否|访问控制类型：-   white： 仅转发来自所选访问控制策略组中设置的IP地址或地址段的请求，白名单适用于应用只允许特定IP访问的场景。
@@ -59,7 +57,7 @@
 |AclId|String|否|监听绑定的访问策略组ID。当AclStatus参数的值为on时，该参数必选。
 
 |
-|HealthCheckType|String|否|健康检查类型。取值：tcp（默认值） | http
+|HealthCheckType|String|否|健康检查类型。取值：tcp | http
 
 |
 |HealthCheckDomain|String|否|用于健康检查的域名，取值：-   $\_ip： 后端服务器的私网IP。当指定了IP或该参数未指定时，负载均衡会使用各后端服务器的私网IP当做健康检查使用的域名。
@@ -94,25 +92,21 @@
  |
 |HealthCheckHttpCode|String|否| 健康检查正常的HTTP状态码，多个状态码用逗号分隔。
 
- 取值：http\_2xx（默认值） | http\_3xx | http\_4xx | http\_5xx
+ 取值：http\_2xx | http\_3xx | http\_4xx | http\_5xx
 
  |
 |SynProxy|String|否|是否开启SynProxy，SynProxy是负载均衡的攻击防护功能。建议一般情况下不要调整这个参数，由负载均衡控制。
 
-取值：enable|disable（默认值）
-
 |
-|VServerGroup|String|否|是否使用虚拟服务器组。取值：on|off（默认值）
+|VServerGroup|String|否|是否使用虚拟服务器组。取值：on | off
 
 **说明：** VserverGroup和MasterSlaveServerGroup只允许一个值为on。
 
 |
 |PersistenceTimeout|Integer|否|会话保持的超时时间。取值：0-3600（秒）
 
-默认值为0，关闭会话保持。
-
 |
-|MasterSlaveServerGroup| | |是否使用主备服务器组。取值：on|off（默认值）
+|MasterSlaveServerGroup| | |是否使用主备服务器组。取值：on | off
 
 **说明：** VserverGroup和MasterSlaveServerGroup只允许一个值为on。
 
