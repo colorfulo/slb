@@ -46,6 +46,13 @@
 |AclId|String|否|监听绑定的访问策略组ID。当AclStatus参数的值为on时，该参数必选。
 
 |
+|Description|String|否|设置监听的描述信息。|
+|ListenerForward|String|否|是否开启HTTP至HTTPS的转发。on | off
+
+|
+|ForwardPort|Integer|否|HTTP至HTTPS的监听转发端口。暂时只支持将HTTP 80访问重定向转发至HTTPS 443。
+
+|
 |XForwardedFor|String|否|是否开启通过X-Forwarded-For头字段获取来访者真实 IP，取值： on（默认值） | off
 
 |
