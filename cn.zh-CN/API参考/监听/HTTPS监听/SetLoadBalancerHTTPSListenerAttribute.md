@@ -16,7 +16,7 @@
 |ListenerPort|Integer|是|负载均衡实例前端使用的端口，取值：1-65535
 
 |
-|VServerGroup|String|否|是否使用服务器组，取值：on | off \(默认值\)
+|VServerGroup|String|否|是否使用服务器组，取值：on | off
 
 |
 |VServerGroupId|String|否|服务器组ID。当VServerGroup的值为on时，该参数必须指定。
@@ -30,7 +30,7 @@
 -   \[1-5000\]：监听的带宽峰值，所有监听的带宽峰值之和不能超过实例的带宽峰值。
 
 |
-|XForwardedFor|String|否|是否开启通过X-Forwarded-For头字段获取来访者真实 IP，取值： on（默认值） | off
+|XForwardedFor|String|否|是否开启通过X-Forwarded-For头字段获取来访者真实 IP，取值： on | off
 
 |
 |Scheduler|String|否|调度算法。取值：-   wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
@@ -88,13 +88,13 @@
 |HealthCheckInterval|Integer|否|健康检查的时间间隔。取值：1-50（秒）
 
 |
-|HealthCheckHttpCode|String|否|健康检查正常的HTTP状态码，多个状态码用逗号（,）分割。取值：http\_2xx（默认值） | http\_3xx | http\_4xx | http\_5xx
+|HealthCheckHttpCode|String|否|健康检查正常的HTTP状态码，多个状态码用逗号（,）分割。取值：http\_2xx | http\_3xx | http\_4xx | http\_5xx
 
 |
-|Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on（默认值）| off
+|Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on | off（默认值）
 
 |
-|EnableHttp2|String|否|是否开启HTTP/2特性。取值：on（默认值）|off
+|EnableHttp2|String|否|是否开启HTTP/2特性。取值：on | off
 
 |
 |TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[TLS安全策略差异说明](#section_uyg_xtx_32b)，请根据实际情况选择对应的policy。
