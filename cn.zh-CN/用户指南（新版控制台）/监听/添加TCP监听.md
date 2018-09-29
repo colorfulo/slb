@@ -11,16 +11,17 @@ TCP协议适用于注重可靠性，对数据准确性要求高，速度可以�
 完成以下操作，打开监听配置向导：
 
 1.  登录[负载均衡管理控制台](https://slb.console.aliyun.com)。
-2.  在左侧导航栏，选择**实例** \> **实例管理**。
-3.  选择实例的地域。
-4.  选择以下一种方法，打开监听配置向导：
+2.  登录。
+3.  在左侧导航栏，选择**实例** \> **实例管理**。
+4.  选择实例的地域。
+5.  选择以下一种方法，打开监听配置向导：
     -   在实例管理页面，找到目标实例，然后单击**添加配置向导**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208710004_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153821121810004_zh-CN.png)
 
     -   在实例管理页面，单击目标实例ID。在监听页面，单击**添加监听**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15356020877399_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16161/15382112187399_zh-CN.png)
 
 
 ## 步骤二 配置协议监听 {#section_mhj_lmn_42b .section}
@@ -83,7 +84,7 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
 2.  单击**下一步**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877421_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15382112187421_zh-CN.png)
 
 
 ## 步骤三 添加后端服务器 {#section_vqk_zmn_42b .section}
@@ -94,11 +95,11 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
 1.  选择**默认服务器组**，单击**添加**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208710030_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153821121810030_zh-CN.png)
 
 2.  选择要添加的ECS实例，然后单击**加入待添加篮**。单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877499_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15382112187499_zh-CN.png)
 
 3.  配置添加的后端服务器的端口和权重。
     -   端口
@@ -111,7 +112,7 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
         **说明：** 权重设置为0，该服务器不会再接受新请求。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15356020877504_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/15382112187504_zh-CN.png)
 
 4.  单击**下一步**。
 
@@ -119,7 +120,7 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 
 负载均衡通过健康检查来判断后端服务器（ECS实例）的业务可用性。健康检查机制提高了前端业务整体可用性，避免了后端ECS异常对总体服务的影响。单击**修改**更改健康检查配置，详情参见[配置健康检查](cn.zh-CN/用户指南（新版控制台）/健康检查/配置健康检查.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810032_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153821121810032_zh-CN.png)
 
 ## 步骤五 提交配置 {#section_hwm_qnn_42b .section}
 
@@ -129,12 +130,12 @@ TCP协议是基于IP地址的会话保持，即来自同一IP地址的访问请�
 2.  确认无误后，单击**提交**。
 3.  在配置审核页面，配置成功后，单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810033_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153821121910033_zh-CN.png)
 
 
 配置成功后，您可以在监听页面查看已创建的监听。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153560208810034_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16139/153821121910034_zh-CN.png)
 
 ## 相关操作 {#section_or1_14n_42b .section}
 
