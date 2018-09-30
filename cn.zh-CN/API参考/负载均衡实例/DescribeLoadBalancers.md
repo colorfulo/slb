@@ -35,7 +35,7 @@
 |ServerId|String|否|添加的后端服务器（ECS实例）的ID。|
 |MasterZoneId|String|否|负载均衡实例的主可用区ID。|
 |SlaveZoneId|String|否|负载均衡实例的备可用区ID。|
-|Tags|List|否|负载均衡实例绑定的标签。最多可指定10个标签。
+|Tags|String|否|负载均衡实例绑定的标签。最多可指定10个标签。
 
 |
 
@@ -74,13 +74,20 @@
 -   classic：经典网络实例
 
 |
-|Bandwidth|String|按带宽计费的公网型实例的带宽峰值。|
 |CreateTime|String|负载均衡实例的创建时间。|
 |MasterZoneId|String|实例的主可用区ID。|
 |SlaveZoneId|String|实例的备可用区ID。|
-|LoadBalancerSpec|String|负载均衡实例的的性能规格。如果取值为空，则代表是性能保障型实例。
+|InternetChargeType|String|公网实例的计费方式。取值：-   paybybandwidth：按带宽计费
+-   paybytraffic：按流量计费（默认值）
+
+**说明：** 当PayType参数的值为PrePay时，只支持按带宽计费。
 
 |
+|PayType|String|实例的计费类型，取值：-   PayOnDemand：按量付费
+-   PrePay：预付费
+
+|
+|ResourceGroupId|String|企业资源组ID。|
 
 ## 示例 {#section_ix5_h1g_cz .section}
 
