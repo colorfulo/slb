@@ -16,7 +16,7 @@
 |ListenerPort|Integer|是|负载均衡实例前端使用的端口，取值：1-65535
 
 |
-|VServerGroup|String|否|是否使用服务器组，取值：on | off \(默认值\)
+|VServerGroup|String|否|是否使用服务器组，取值：on | off
 
 |
 |VServerGroupId|String|否|服务器组ID。当VServerGroup的值为on时，该参数必须指定。
@@ -30,10 +30,10 @@
 -   \[1-5000\]：监听的带宽峰值，所有监听的带宽峰值之和不能超过实例的带宽峰值。
 
 |
-|XForwardedFor|String|否|是否开启通过X-Forwarded-For头字段获取来访者真实 IP，取值： on（默认值） | off
+|XForwardedFor|String|否|是否开启通过X-Forwarded-For头字段获取来访者真实 IP，取值： on | off
 
 |
-|Scheduler|String|否|调度算法。取值：-   wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
+|Scheduler|String|否|调度算法。取值：-   wrr：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
 -   wlc：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。
 -   rr：按照访问顺序依次将外部请求依序分发到后端服务器。
 
@@ -71,8 +71,7 @@
 
 |
 |HealthCheckURI|String|否|用于健康检查的URI。|
-|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   -520：使用监听配置的后端服务端口。
--   1-65535：健康检查的后端服务器的端口。
+|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   1-65535：健康检查的后端服务器的端口。
 
 |
 |HealthyThreshold|Integer|否|健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。取值：2-10
@@ -89,12 +88,50 @@
 |HealthCheckInterval|Integer|否|健康检查的时间间隔。取值：1-50（秒）
 
 |
-|HealthCheckHttpCode|String|否|健康检查正常的HTTP状态码，多个状态码用逗号（,）分割。取值：http\_2xx（默认值） | http\_3xx | http\_4xx | http\_5xx
+|HealthCheckHttpCode|String|否|健康检查正常的HTTP状态码，多个状态码用逗号（,）分割。取值：http\_2xx | http\_3xx | http\_4xx | http\_5xx
 
 |
-|Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on（默认值）| off
+|Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on | off（默认值）
 
 |
+|EnableHttp2|String|否|是否开启HTTP/2特性。取值：on | off
+
+|
+|TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[TLS安全策略差异说明](#section_uyg_xtx_32b)，请根据实际情况选择对应的policy。
+
+-   tls\_cipher\_policy\_1\_0：
+    -   支持TLS版本： TLSv1.0、TLSv1.1和TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_1：
+    -   支持TLS版本： TLSv1.1和TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_2
+    -   支持TLS版本：TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_2\_strict
+    -   支持TLS版本：TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、ECDHE-RSA-AES128-SHA和ECDHE-RSA-AES256-SHA。
+
+|
+
+## TLS安全策略差异说明 {#section_uyg_xtx_32b .section}
+
+|policy|tls\_cipher\_policy\_1\_0|tls\_cipher\_policy\_1\_1|tls\_cipher\_policy\_1\_2|tls\_cipher\_policy\_1\_2\_strict|
+|------|-------------------------|-------------------------|-------------------------|---------------------------------|
+|TLS| |1.2/1.1/1.0|1.2/1.1|1.2|1.2|
+|CIPHER|ECDHE-RSA-AES128-GCM-SHA256|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-GCM-SHA384|✔|✔|✔|✔|
+|ECDHE-RSA-AES128-SHA256|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-SHA384|✔|✔|✔|✔|
+|AES128-GCM-SHA256|✔|✔|✔| |
+|AES256-GCM-SHA384|✔|✔|✔| |
+|AES128-SHA256|✔|✔|✔| |
+|AES256-SHA256|✔|✔|✔| |
+|ECDHE-RSA-AES128-SHA|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-SHA|✔|✔|✔|✔|
+|AES128-SHA|✔|✔|✔| |
+|AES256-SHA|✔|✔|✔| |
+|DES-CBC3-SHA|✔|✔|✔| |
 
 ## 返回参数 {#section_unk_d2c_ndb .section}
 
@@ -109,7 +146,7 @@
 ``` {#public}
 https://slb.aliyuncs.com/?Action=SetLoadBalancerHTTPSListenerAttribute
 &LoadBalancerId=lb-t4nj5vuz8ish9emfk1f20
-&ListenerPort=80
+&ListenerPort=443
 &BackendServerPort=80
 &ServerCertificateId=1231579085529123_15dbf6ff26f_1991415478_2054196746
 &Bandwidth=-1
