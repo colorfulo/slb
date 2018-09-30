@@ -4,7 +4,7 @@ Integrated with Alibaba Cloud Log Service, you can understand the behavior and g
 
 ## What are access logs? {#section_h3l_1ls_vdb .section}
 
-The access log collects detailed information of all requests sent to a Server Load Balancer instance, including the request time, client IP address, latency, request URL, server response, and so on. As the entry of Internet access, Server Load Balancer receives massive client requests. You can use access logs to analyze user behavior and geographical distribution, troubleshoot issues.
+The access log collects detailed information of all requests sent to a Server Load Balancer instance, including the request time, client IP address, latency, request URL, server response, and so on. As the entry of Internet access, Server Load Balancer receives massive client requests. You can use access logs to analyze user behavior and geographical distribution,and troubleshoot.
 
 After you enable the SLB access logs, you can store the access logs in the Logstore of SLS to collect and analyze the access logs. You can also disable access logs at any time.
 
@@ -45,12 +45,12 @@ Before configuring access logs, make sure:
 
 To configure access logs, complete these steps.
 
-1.  Log on to the [SLB console](https://slb.console.aliyun.com).
+1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
 2.  In the left-side navigation pane, click **Logs** \> **Access Logs**.
 3.  Select a region.
 4.  Click **Authorize**, and then click **Confirm Authorization Policy** to authorize Server Load Balancer to write logs to Log Service.
 
-    If you are using a RAM account, the primary account is required to perform authorization. For more information, see [Authorize a RAM user to use access logging](intl.en-US/User Guide/Log management/Authorize a RAM user to configure access logs.md#).
+    If you are using a RAM account, the primary account is required to perform authorization. For more information, see [Authorize a RAM user to use access logging](reseller.en-US/User Guide/Log management/Authorize a RAM user to configure access logs.md#).
 
     **Note:** This operation is required only at the first time.
 
@@ -61,17 +61,17 @@ To configure access logs, complete these steps.
 
     **Note:** Make sure that the name of the LogProject is globally unique and the region of the LogProject is the same as that of the Server Load Balancer instance.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15368937867478_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15382923497478_en-US.png)
 
 
 ## Search and analyze access logs {#section_od1_l4s_vdb .section}
 
 After configuring Server Load Balancer access logs, you can search and view logs using the following indexing fields.
 
-|Field|Field description|
-|:----|:----------------|
+|Field|Description|
+|:----|:----------|
 |body\_bytes\_sent|The size of HTTP body \(in byte\) sent to the client.|
-|Client\_ip|The client IP.|
+|client\_ip|The client IP.|
 |host |The host header in the request.|
 |http\_user\_agent|The received http\_user\_agent header in the request.|
 |request\_length |The length of the request including startline, HTTP header and HTTP body.|
@@ -93,28 +93,28 @@ To search access logs, complete these steps:
 
         On the Access Logs page, click **View Logs**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15368937877479_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15382923497479_en-US.png)
 
-    -   From the Log Service console:
+    -   Log Service Console
 
         On the Logstores page, click **Search** of the target Logstore.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4150/15368937872492_en-US.png)
+        ![](images/12838_en-US.png)
 
-2.  Click the corresponding index field to view detailed information.
+2.  Click the target log field to view detailed information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4150/15368937872493_en-US.png)
+    ![](images/12857_en-US.png)
 
-3.  Enter an SQL statement to query.
+3.  Enter an SQL statement to query access logs.
 
-    For example, enter the following SQL statement to query Top 20 clients.
+    For example, enter the following SQL statement to query the client of Top20, which is used for analyzing the request resource to assist business decision-making.
 
     ```
     * | select ip_to_province(client_ip) as client_ip_province, count(*) as pv group by
           client_ip_province order by pv desc limit 50
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4150/15368937872494_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4150/15382923492494_en-US.png)
 
 
 ## Analyze access logs {#section_cvs_xps_vdb .section}
@@ -123,22 +123,22 @@ You can analyze access logs through the dashboard, which provides various graphi
 
 To analyze access logs, complete these steps:
 
-1.  On the Log Service console, click the project name of the target project.
-2.  In the left-side navigation pane, click **Search/Analytics - Query** \> **Dashboard**, and then click **View**.
+1.  On the Log Service console, click the project link of the SLB instance.
+2.  In the left-side navigation pane, click **Search/Analytics - Query** \> **Dashboard**, and then click the name of the access log.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4150/15368937872495_en-US.png)
+    ![](images/12867_en-US.png)
 
 
 ## Disable access logging {#section_vgd_kqs_vdb .section}
 
 To disable access logging, complete these steps:
 
-1.  Log on to the [SLB console](https://slb.console.aliyun.com).
+1.  Log on to the [SLB console](https://partners-intl.aliyun.com/login-required#/slb).
 2.  In the left-side navigation pane, click **Logs** \> **Access Logs**.
 3.  Select a region.
 4.  On the Access Logs page, find the target instance and click **Delete** to disable access logging.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15368937877480_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15681/15382923497480_en-US.png)
 
-5.  Click **OK** in the displayed dialog box.
+5.  In the displayed dialog box, click **OK**.
 
