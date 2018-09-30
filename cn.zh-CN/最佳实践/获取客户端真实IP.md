@@ -24,21 +24,21 @@
 2.  根据自己的服务器操作系统版本将x86\\Release或者 x64\\Release目录下的 F5XFFHttpModule.dll 和 F5XFFHttpModule.ini拷贝到某个目录，比如 C:\\F5XForwardedFor\\。确保IIS进程对该目录有读取权限。
 3.  打开**IIS管理器**，双击**模块**功能。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293132_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15382791473132_zh-CN.png)
 
 4.  单击**配置本机模块**，然后在弹出的对话框中，单击**注册**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293133_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15382791473133_zh-CN.png)
 
 5.  添加下载的.dll文件。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293135_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15382791473135_zh-CN.png)
 
 6.  为添加的两个文件授权允许运行ISAPI和CGI扩展。
 
     **说明：** 确保您已经安装了ISAPI和CGI应用程序。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293136_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15382791483136_zh-CN.png)
 
 7.  重启IIS服务器，等待配置生效。
 
