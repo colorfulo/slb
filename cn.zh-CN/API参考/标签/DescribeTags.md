@@ -7,7 +7,7 @@
 -   支持根据实例ID、标签键值、标签值等条件查询。
 -   指定的查询条件为and关系，只有满足所有指定条件的便签才会被返回。
 -   如果指定了标签的key而没有指定标签的值，则返回所有符合指定Key的标签。
--   不允许只指定TagValue而不指定TagValue。
+-   不允许只指定TagKey而不指定TagValue。
 
 ## 请求参数 {#section_v5w_nds_cz .section}
 
@@ -20,11 +20,12 @@
 
 |
 |LoadBalancerID|String|否|负载均衡实例ID。|
-|Tags|List|否|要查询的标签列表。|
+|Tags|String|否|要查询的标签列表。|
 |PageSize|Integer|否|分页查询时设置的每页行数。取值范围：\[1, 50\]默认值为10。
 
 |
 |PageNumber|Integer|否|列表页码，默认值1。|
+|DistinctKey|String|否|是否为DistinctKey。|
 
 |名称|类型|是否必须|描述|
 |:-|:-|:---|:-|
