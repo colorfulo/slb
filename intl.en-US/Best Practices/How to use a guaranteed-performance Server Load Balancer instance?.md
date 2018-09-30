@@ -51,7 +51,7 @@ All instances are shared-performance instances before Alibaba launches guarantee
 
 Hover your mouse pointer to the green icon of the target instance to view the performance metrics, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623277_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303277_en-US.png)
 
 The following are three key performance metrics for guaranteed-performance instances:
 
@@ -113,7 +113,7 @@ Load Balancing is divided into two types of charging modes, pre-payment and on-d
 
     The following figure is an example showing how the capacity fee is billed for an SLB instance in the first three hours:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623280_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303280_en-US.png)
 
     The billing of the guaranteed-performance instances is flexible.  The performance capacity selected when purchasing an SLB instance limits the performance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
@@ -177,24 +177,24 @@ Capacity fees of guaranteed-performance instances in the international regions c
 
         Example of concurrent connections monitoring
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623281_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303281_en-US.png)
 
         New Connection monitoring example
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623282_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303282_en-US.png)
 
         QPS monitoring example
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623283_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303283_en-US.png)
 
 
 ## 5. Can I modify the capacity after the instance is created? {#section_dmb_q2n_vdb .section}
 
 Yes. You can change the capacity at any time and the change takes effect immediately. 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623284_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303284_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623287_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303287_en-US.png)
 
 The specifications of the cost-per-volume performance-guaranteed instance can be either elevated or lowered, A white list is required for the Performance-guaranteed instance of the Year-to-month package. For details, please refer to the package years and months instance variation.
 
@@ -207,7 +207,7 @@ Therefore, we recommend that you first use a paid instance to test your business
 -   Some instances may exist in older clusters due to historical stock. If you change a shared-performance instance to a guaranteed-performance instance, a brief disconnection of service may occur for 10 to 30 seconds. Therefore, we recommend that changing the capacity in period of low traffic volume or performing load balancing among instances through [GSLB](https://promotion.aliyun.com/ntms/act/globalslb.html?spm=5176.71615.741495.1.307291894icRpB&wh_ttid=pc) first.
 -   The IP of the SLB instance will not be changed after you changing the instance type or the capacity.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623288_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303288_en-US.png)
 
 ## 6. When will be the guaranteed-performance instances charged? {#section_gvt_kfn_vdb .section}
 
@@ -240,7 +240,7 @@ No.
 
 The billing of the original shared-performance instances is the same if you do not change it to a performance-guaranteed instance.  However, if you change the shared-performance instance to the guaranteed-performance one, the capacity fee will be charged from the April 1st, 2018.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15379525623289_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4163/15382791303289_en-US.png)
 
 ## 8. Why sometimes guaranteed-performance instances cannot reach the performance limit as defined in the capacity? {#section_ehc_vfn_vdb .section}
 
