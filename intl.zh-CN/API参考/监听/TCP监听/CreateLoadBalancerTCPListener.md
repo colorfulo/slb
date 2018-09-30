@@ -34,6 +34,10 @@
 |Scheduler|String|否|调度算法。取值：-   wrr（默认值）：权重值越高的后端服务器，被轮询到的次数（概率）也越高。
 -   wlc：除了根据每台后端服务器设定的权重值来进行轮询，同时还考虑后端服务器的实际负载（即连接数）。当权重值相同时，当前连接数越小的后端服务器被轮询到的次数（概率）也越高。
 -   rr：按照访问顺序依次将外部请求依序分发到后端服务器。
+-   sch：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。
+-   tch：基于四元组的一致性hash（源IP+目的IP+源端口+目的端口），相同的流会调度到相同的后端服务器。
+
+**说明：** 仅有性能保障型实例支持sch和tch一致性hash算法。
 
 |
 |PersistenceTimeout|Integer|否|会话保持的超时时间。取值：0-3600（秒）
@@ -44,6 +48,9 @@
 |EstablishedTimeout|Integer|否| 连接超时时间。
 
  取值：10-900（秒）
+
+ |
+|Description|String|否| 设置监听的描述信息。
 
  |
 |AclStatus|String|否| 是否开启访问控制功能。
@@ -86,7 +93,8 @@
 |
 |HealthCheckConnectPort|Integer|否| 健康检查使用的端口。取值：
 
- -   1-65535：健康检查的后端服务器的端口。
+ -   -520：默认使用监听配置的后端端口。
+-   1-65535：健康检查的后端服务器的端口。
 
  |
 |HealthyThreshold|Integer|否|健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。取值：2-10
@@ -95,11 +103,11 @@
 |UnhealthyThreshold|Integer|否|健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。取值：2-10
 
 |
-|HealthCheckTimeout|Integer|否| 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。
+|HealthCheckConnectTimeout|Integer|否| 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。
 
  取值：1-300（秒）
 
- **说明：** 如果HealthCHeckTimeout的值小于HealthCheckInterval的值，则HealthCHeckTimeout无效，超时时间为HealthCheckInterval的值。
+ **说明：** 如果HealthCheckConnectTimeout的值小于HealthCheckInterval的值，则HealthCheckConnectTimeout无效，超时时间为HealthCheckInterval的值。
 
  |
 |HealthCheckInterval|Integer|否| 健康检查的时间间隔。
