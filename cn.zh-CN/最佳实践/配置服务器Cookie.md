@@ -6,7 +6,7 @@
 
 如果您选择使用重写Cookie的方式，需要在后端服务器上配置Cookie。假如您的负载均衡服务地址下有两个域名：vip.a.com和img.a.com，当您想为vip.a.com配置会话保持时，您可以设置Cookie名称为name，然后在后端服务器上为域名vip.a.com设置key为name的Cookie。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4164/3120_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4164/15382791673120_zh-CN.png)
 
 本文档介绍了如何在Apache、Nginx和Lighttpd应用服务器上配置Cookie。
 
