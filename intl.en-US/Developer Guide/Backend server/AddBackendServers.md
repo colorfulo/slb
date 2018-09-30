@@ -29,15 +29,15 @@ Add backend servers to a Server Load Balancer \(SLB\) instance.
 
 ## Response parameters {#section_ssd_pds_cz .section}
 
-|Name|Type|Required|
-|:---|:---|:-------|
+|Name|Type|Description|
+|:---|:---|:----------|
 |RequestId|String|The ID of the request.|
 |LoadBalancerId|String|The ID of the SLB instance.|
 |BackendServers|List|A list of backend servers.|
 
-|Name |Type|Required|
-|:----|:---|:-------|
-|ServerId|String|The ID of the ECS instance|
+|Name |Type|Description|
+|:----|:---|:----------|
+|ServerId|String|The ID of the ECS instance.|
 |Weight|Integer|The weight of the backend server.|
 
 ## Examples {#section_oxr_pds_cz .section}
