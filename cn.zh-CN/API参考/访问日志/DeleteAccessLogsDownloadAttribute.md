@@ -6,9 +6,11 @@
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
-|Action|String|是|操作接口名。|
+|Action|String|是|要执行的操作，取值：SetAccessLogsDownloadAttribute
+
+|
 |RegionId|String|是|SLB实例所在的Region。|
-|LogsDownloadAttributes|String|是|访问日志转发规则，具体请参见|
+|LogsDownloadAttributes|String|是|访问日志转发规则，具体请参见[表 1](#table_bqj_3dk_l2b)。|
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
