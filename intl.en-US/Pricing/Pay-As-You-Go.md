@@ -94,7 +94,7 @@ For example, the capacity slb.s3.large \(1,000,000; CPS 500,000; QPS 50,000\) is
 
 The following figure is an example showing how the specification fee is billed for an SLB instance in the first three hours: 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15379498413113_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15382787403113_en-US.png)
 
 The billing of the guaranteed-performance instances is flexible.  The capacity you select when purchasing an instance is the performance limitation of the instance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
