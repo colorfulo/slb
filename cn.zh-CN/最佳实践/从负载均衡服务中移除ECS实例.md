@@ -14,7 +14,7 @@
 
 4.  将鼠标移至要移除的ECS实例的权重区域，单击出现的铅笔图标，然后将权重修改为0。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/3124_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/15382792603124_zh-CN.png)
 
 5.  当负载均衡服务不再转发流量给该ECS实例后，单击**移除**。
 
@@ -26,15 +26,15 @@
 
     登录负载均衡管理控制台，可以根据ECS实例ID和内网IP查询该ECS实例所属的负载均衡实例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/3126_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/15382792603126_zh-CN.png)
 
 -   登录ECS实例，用`netstat`命令查看服务器端口监听情况。根据端口监听情况查看ECS本身是否对公网提供了其他服务。
     -   Windows： 运行`netstat -ano`，可以查看本机开放的全部端口。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/3130_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/15382792603130_zh-CN.png)
 
     -   Linux： 也可以使用该命令查看本机开放端口，或使用`netstat`命令的其他参数。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/3131_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4166/15382792603131_zh-CN.png)
 
 
