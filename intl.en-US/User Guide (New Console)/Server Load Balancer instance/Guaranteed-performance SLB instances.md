@@ -1,6 +1,6 @@
 # Guaranteed-performance SLB instances {#concept_umd_czv_tdb .concept}
 
-Alibaba Cloud plans to charge specification fee on guaranteed-performance Server Load Balancer instances from April 1, 2018, and continue to sell shared-performance Server Load Balancer instances.
+Alibaba Cloud now charges specification fees for guaranteed-performance SLB instances.
 
 ## 1. What are guaranteed-performance instances? {#section_lht_gym_vdb .section}
 
@@ -10,7 +10,7 @@ All instances are shared-performance instances before Alibaba launches guarantee
 
 Hover your mouse pointer to the green icon of the target instance to view the performance metrics, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15382321977175_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15389814237175_en-US.png)
 
 The following are three key performance metrics for guaranteed-performance instances:
 
@@ -65,7 +65,7 @@ For example, if you purchase the slb.s3.large specification \(1,000,000; CPS 500
 
 The following figure is an example showing how the specification fee is billed for an SLB instance in the first three hours: 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4113/15382321972301_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4113/15389814232301_en-US.png)
 
 The billing of the guaranteed-performance instances is flexible. The specification you select when purchasing an instance is the performance limitation of the instance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
@@ -124,9 +124,9 @@ Because the specification fee is billed based on the actual usage, we recommend 
 
 Yes. You can change the specification at any time and the change takes effect immediately.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15382321977343_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15389814237343_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15382321977344_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15389814237344_en-US.png)
 
 **Note:** 
 
@@ -134,7 +134,7 @@ Yes. You can change the specification at any time and the change takes effect im
 -   Some instances may exist in older clusters due to historical stock. If you change a shared-performance instance to a guaranteed-performance instance, a brief disconnection of service may occur for 10 to 30 seconds. We recommend that you change the specification when the business is not busy.
 -   The IP of the SLB instance will not be changed after you changing the instance type or the specification.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15382321977345_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15642/15389814237345_en-US.png)
 
 ## 6. When will the guaranteed-performance instances be charged? {#section_gvt_kfn_vdb .section}
 
