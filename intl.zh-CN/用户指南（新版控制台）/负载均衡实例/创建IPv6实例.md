@@ -35,11 +35,11 @@ IPv6是Internet Protocol Version 6的缩写，其中Internet Protocol译为互�
 
     **说明：** 目前，仅有华东1地域的E、F两个可用区和华北2地域的F、G两个可用区支持创建IPv6实例且实例类型必须为性能保障型实例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15645/15368914657308_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15645/15390501547308_zh-CN.png)
 
 5.   返回实例列表页面，查看已创建的IPv6实例。 
 
 创建后，系统会为该实例分配一个IPv6地址。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15645/15368914657309_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15645/15390501547309_zh-CN.png)
 
