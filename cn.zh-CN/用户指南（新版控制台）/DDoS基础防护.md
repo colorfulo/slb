@@ -61,7 +61,7 @@
     -   PPS清洗阈值：入方向数据包数超过了PPS清洗阈值时，触发清洗。
     -   黑洞阈值：入方向流量超过黑洞阈值时将触发黑洞。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15694/15382119997339_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15694/15390504087339_zh-CN.png)
 
 
 ## 授权云盾基础防护只读权限 {#section_c4n_wjc_wdb .section}
@@ -73,12 +73,12 @@
 1.  使用主账号登录访问控制RAM管理控制台。
 2.  在左侧导航栏，单击**用户管理**，找到目标子账号，然后单击**管理**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4157/15382119992872_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4157/15390504082872_zh-CN.png)
 
 3.  单击**用户授权策略**，然后单击**编辑授权策略**。
 4.  在弹出的对话框，在可授权策略列表中搜索**AliyunYundunDDosReadOnlyAccess**，将其加入到已授权策略列表。单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4157/15382119992873_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4157/15390504082873_zh-CN.png)
 
 
 ## 查看安全信誉分 {#section_chv_cjy_gfb .section}
@@ -94,6 +94,6 @@
 
     **说明：** 安全信誉值是分地域的。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15694/153821199912959_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15694/153905040812959_zh-CN.png)
 
 
