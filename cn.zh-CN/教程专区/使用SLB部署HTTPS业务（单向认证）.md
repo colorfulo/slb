@@ -2,6 +2,8 @@
 
 要配置HTTPS单向认证的监听，您仅需要在配置监听时上传服务器证书。
 
+
+
 ## 步骤一 上传服务器证书 {#section_tqs_yw5_vdb .section}
 
 在配置HTTPS监听（单向认证）前，您需要购买服务器证书，并将服务器证书上传到负载均衡的证书管理系统。上传后，无需在后端ECS上进行其它证书配置。
@@ -16,7 +18,7 @@
     -   证书类型：选择**服务器证书**。
     -   证书内容和私钥：复制服务器证书的内容和私钥。单击**导入样例**查看合法的证书格式。上传的证书必须是PEM格式，详情查看[证书格式要求](cn.zh-CN/历史文档/用户指南/证书管理/证书要求.md#)。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393284207324_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393309777324_zh-CN.png)
 
 4.  单击**确定**，完成上传。
 
@@ -36,11 +38,11 @@
     -   **选择负载均衡协议**：HTTPS
     -   **监听端口**：443
     -   **调度算法**：轮询（RR）
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153932842010035_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153933097710035_zh-CN.png)
 
 8.  单击**下一步**，在SSL证书页签下，选择已经上传的服务器证书。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393284207326_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393309777326_zh-CN.png)
 
 9.  单击**下一步**，选择默认服务器组，单击**添加**，添加ECS服务器，后端协议监听端口设置为80。
 10. 在左侧导航栏，单击**服务器** \> **后端服务器** ，然后单击**添加后端服务器**，添加ECS服务器。
@@ -53,8 +55,8 @@
 
 2.  在浏览器中输入负载均衡的公网服务地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393284207447_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393309777447_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393284207448_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/15658/15393309777448_zh-CN.png)
 
 
