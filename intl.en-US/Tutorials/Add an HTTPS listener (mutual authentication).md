@@ -69,7 +69,7 @@ A server certificate is used by the client browser to check whether the certific
 
     The following figure is an example of the key generation.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592750_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082750_en-US.png)
 
 4.  Run the following command and input the required information according to the prompts. Press Enter to generate the csr file used to generate the certificate.
 
@@ -79,7 +79,7 @@ A server certificate is used by the client browser to check whether the certific
 
     **Note:** Common Name is the domain name of the SLB instance.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592753_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082753_en-US.png)
 
 5.  Run the following command to generate the crt file.
 
@@ -138,7 +138,7 @@ A server certificate is used by the client browser to check whether the certific
 
     **Note:** A challenge password is the client certificate password \(Separate it from the password of `client.key`. In this tutorial, the password is test\). It can be same as that of the root certificate or server certificate.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592757_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082757_en-US.png)
 
 4.  Run the following command to sign the client key by using the CA key in step 2.
 
@@ -148,7 +148,7 @@ A server certificate is used by the client browser to check whether the certific
 
     Enter y twice when prompted to confirm the operation.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592758_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082758_en-US.png)
 
 5.  Run the following command to convert the certificate to the PKCS12 file that can be recognized by most browsers.
 
@@ -160,7 +160,7 @@ A server certificate is used by the client browser to check whether the certific
 
     Then enter the password used for exporting the client certificate. This password is used to protect the client certificate, which is required when installing the client certificate.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592759_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082759_en-US.png)
 
 6.  Run the following command to view the generated client certificate.
 
@@ -169,7 +169,7 @@ A server certificate is used by the client browser to check whether the certific
      ls
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396848592760_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4133/15396853082760_en-US.png)
 
 
 ## Step 4 Upload the server certificate and the CA certificate {#section_mdg_411_wdb .section}
@@ -231,7 +231,7 @@ Install the generated client certificates. The Windows operating system and IE w
     -   **Select Listener Protocol**: HTTPS
     -   **Listening Port**: 443
     -   **Scheduling Algorithm**: Round Robin \(RR\)
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153968486010035_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/16604/153968530810035_en-US.png)
 
 5.  Click **Next**. Under the SSL Certificates tab, configure the SSL certificate and enable mutual authentication.
 
