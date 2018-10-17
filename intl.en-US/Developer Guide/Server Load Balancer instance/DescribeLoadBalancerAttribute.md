@@ -4,13 +4,13 @@ Query the detailed information of an SLB instance.
 
 ## Request parameters {#section_v5w_nds_cz .section}
 
-|Name |Type|Required|Description|
-|:----|:---|:-------|:----------|
-|Action |String | Yes|The action to perform. Valid value:DescribeLoadBalancerAttribute
+|Name|Type|Required|Description|
+|:---|:---|:-------|:----------|
+|Action|String |Yes|The action to perform. Valid value:DescribeLoadBalancerAttribute
 
 |
-|LoadBalancerId|String | Yes|The ID of the SLB instance.|
-|RegionId|String| No|The region of the SLB instance. You can obtain the region ID by calling the DescribeRegions API.
+|LoadBalancerId|String|Yes|The ID of the SLB instance.|
+|RegionId|String|No|The region of the SLB instance. You can obtain the region ID by calling the DescribeRegions API.
 
 |
 
@@ -19,11 +19,11 @@ Query the detailed information of an SLB instance.
 |Name|Type|Description|
 |:---|:---|:----------|
 |RequestId|String|The ID of the request.|
-|LoadBalancerId|String|The ID of the SLB instance.|
+|LoadBalancerId|String|The ID of Server Load Balancer instance.|
 |RegionId|String|The ID of the region where the SLB instance is located.|
 |RegionIdAlias|String|The alias of the region where the SLB instance is located.|
 |LoadBalancerName|String|The name of the SLB instance.|
-|LoadBalancerStatus|String|The status of the SLB instance.-   inactive: When the SLB instance in the inactive status, the listeners in the instance cannot distribute traffic any more.
+|LoadBalancerStatus|String|The status of the SLB instance.-   inactive: When the SLB instance in the inactive status, the listeners of the instance do not distribute traffic any more.
 -   active: After an instance is created, it is in the active status by default.
 -   locked: The SLB instance is locked.
 
@@ -34,7 +34,7 @@ Query the detailed information of an SLB instance.
 |VpcId|String|The ID of the VPC where the intranet SLB instance is created.|
 |VSwitchId|String|The ID of the VSwitch to which the intranet SLB instance belongs.|
 |Bandwidth|Integer|按带宽计费的公网型实例的带宽峰值。|
-|CreateTime |String|The time when the SLB instance was created.|
+|CreateTime |String|The time when the SLB instance is created.|
 |ListenerPorts|List|The list of frontend ports configured in the SLB instance.|
 |ListenerPortsAndProtocol|List|The list of frontend ports and protocols configured in the SLB instance.|
 |BackendServers|List|The list of backend servers added to the SLB instance.|
@@ -48,10 +48,10 @@ Query the detailed information of an SLB instance.
 |PayType|String|The instance payment type.|
 |ResourceGroupId|String|The ID of the resource group.|
 
-|Name |Type|Description|
-|:----|:---|:----------|
-|ListenerPort|String|The frontend port configured in the SLB instance.|
-|ListenerProtocol|Integer|The frontend protocol used by the SLB instance.|
+|Name|Type|Description|
+|:---|:---|:----------|
+|ListenerPort|Integer|The front-end port of the listener that is used to receive incoming traffic and distribute the traffic to the backend servers.|
+|ListenerProtocol|String|The frontend protocol used by the SLB instance.|
 |listenerForward|String|Whether to enable listener forwarding.|
 |forwardPort|Integer|The destination listening port. It must be an existing HTTPS listening port.|
 
@@ -59,7 +59,7 @@ Query the detailed information of an SLB instance.
 |:----|:---|:----------|
 |ServerId|String|The ID of the backend server \(ECS instance\).|
 |Weight|Integer|The weight of the backend server.|
-|type |String|The type of the backend server.|
+|Type|String|The type of the backend server.|
 
 ## Examples {#section_oxr_pds_cz .section}
 
@@ -111,7 +111,7 @@ https://slb.aliyuncs.com/?Action=DescribeLoadBalancerAttribute
 
     ```
     {
-      "Requestid": "maid ",
+      "RequestId": "365F4154-92F6-4AE4-92F8-7FF34B540710",
       "LoadBalancerId": "139a00604ad-cn-east-hangzhou-01",
       "RegionId": "cn-east-hangzhou-01",
       "LoadBalancerName": "abc",
