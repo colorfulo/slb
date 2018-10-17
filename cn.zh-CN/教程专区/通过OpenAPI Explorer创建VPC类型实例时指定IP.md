@@ -49,8 +49,8 @@
         }
         ```
 
-5.  登录，选择华东1（杭州）区域，查看IP为192.168.0.3的负载均衡实例是否创建成功。 
+5.  登录[负载均衡管理控制台](https://slb.console.aliyun.com/slb/cn-hangzhou/slbs)，选择华东1（杭州）区域，查看IP为192.168.0.3的负载均衡实例是否创建成功。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23817/153970183413814_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23817/153975003813814_zh-CN.png)
 
 
