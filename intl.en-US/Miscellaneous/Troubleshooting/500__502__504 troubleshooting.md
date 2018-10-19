@@ -54,7 +54,7 @@ This document lists the causes, resolutions and troubleshooting steps of these p
 
 6.  SLB reports 502 error due to health check failure
 
-    For more information, see [Resolve health check failures](reseller.en-US/Miscellaneous/Troubleshooting/ECS instance exception troubleshooting.md#).
+    For more information, see [Resolve health check failures](reseller.en-US/Miscellaneous/Troubleshooting/Troubleshoot ECS instance exceptions.md#).
 
     Besides, 502 error also occurs if the health check function of SLB is disabled and the web service in the backend server cannot process HTTP requests.
 
@@ -102,8 +102,6 @@ This document lists the causes, resolutions and troubleshooting steps of these p
 -   Check the performance of backend ECS servers and whether there is performance bottleneck of the CPU, memory, disk, or bandwidth.
 -   If it is determined that the error is due to the backend server, check whether there are any related errors in web server logs of the backend ECS instance. Check whether the web service is running normally and whether the web access logic is correct. Test by uninstalling anti-virus software on the server and restarting the server.
 -   Check whether the TCP kernel parameters of the Linux system on the backend ECS instance are correctly configured.
-
-![](images/3349_en-US.jpg)
 
 ## Submit a ticket {#section_gyl_vcd_xdb .section}
 
