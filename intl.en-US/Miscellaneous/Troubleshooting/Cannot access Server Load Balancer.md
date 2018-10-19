@@ -1,18 +1,18 @@
 # Cannot access Server Load Balancer {#concept_wzy_kyc_xdb .concept}
 
-When the client cannot access Server Load Balancer, the possible causes and resolutions are as follows:
+When the client cannot access Server Load Balancer, the possible reasons and resolutions are as follows:
 
-1.  If you haven't added any listener after creating a SLB instance, you can't ping the endpoint of the SLB instance at this moment.
+1.  If you haven't added any listener to the SLB instance, you can't successfully ping the endpoint of the SLB instance.
 
-    解决方案：配置监听，详情查看[配置监听](../../../../reseller.en-US/Archives/User Guide (Old Console)/Listener/Listeners overview.md#)。
+    Resolution: Configure listeners. For more information, see [Configure listeners](../../../../reseller.en-US/Archives/User Guide (Old Console)/Listener/Listeners overview.md#).
 
-2.  Four-tier Load Balancing back-end Linux The ECS kernel is configured incorrectly.
+2.  The backend Linux ECS kernel of Layer-4 SLB isn't correctly configured.
 
-    An ECS instance of a Linux system added by a four-tier Load Balancing back-end must be turned off for its rrochelle filter feature in the Linux kernel. Otherwise, you may not be able to access the load balancing service addresses from the client by using telnet, but the health check is normal.
+    You must disable the rp\_filter feature of the Linux kernel of the Linux ECS instance added to Layer-4 SLB. Otherwise, the client may not be able to access the endpoint of SLB by using telnet, but the health check is normal.
 
-    Linux's rp\_filter feature is used to implement reverse filtering \(I .e., urpf \). It verifies the flow of reverse packets to avoid IP fake attacks. However, this feature may conflict with the policy route for load balancing the underlying LVS, cause an exception in the access.
+    Linux's rp\_filter feature is used to implement reverse filtering \(URPF\). It verifies the flow of reverse packets to avoid attacks using a forged IP. However, this feature may conflict with the bottom-layer LVS policy route of SLB and causes access exceptions.
 
-    Solution: ensure that the system configuration file for the back-end ECs instance has a value of 0 for the following three parameters. 编辑`/etc/sysctl.conf`后，执行`sysctl -p`使配置生效。
+    Resolution: Ensure that the values of the following three parameters in the system configuration files of the backend ECS instance are zero. Edit `/etc/sysctl.conf` and run the `sysctl -p` command the make the configurations take effect.
 
     ```
      net.ipv4.conf.default.rp_filter = 0
@@ -20,51 +20,51 @@ When the client cannot access Server Load Balancer, the possible causes and reso
      net.ipv4.conf.eth0.rp_filter = 0
     ```
 
-3.  4-tier Load Balancing back windows The ECS parameter is configured incorrectly.
+3.  The backend Windows ECS parameters of Layer-4 SLB are not correctly configured.
 
-    For four-tier load balancing service, load Balancing back-end ECs instances are currently not supported, and services are provided directly to clients at the same time, as a back-end server for your load balancing.
+    For Layer-4 SLB service, a backend ECS instance cannot directly provide service for clients and act as the backend server of the SLB service at the same time.
 
-    This may probably result in the situation that relevant access requests are forwarded to the same ECS, which may cause a data access loop and access failure of the Server Load Balancer service by the corresponding ECS.
+    If the ECS instance act the two roles at the same time, access requests are forwarded to the same ECS instance, which may cause a data access loop and the failure of access from the ECS instance to the SLB service.
 
-    Solutions:
+    Resolution:
 
-    1.  Install Windows Loop Network Card: Right-click**Computer** \> **Attribute** . On the Control Panel home page, click**Device Manager** \> **Add hardware** \> **Install the hardware that I manually select from the list** \> **Show all devices** , Select the device shown in the following figure for installation.
+    1.  Install Windows loopback adapter: Right-click**Computer** \> **Property** . On the Control Panel home page, click**Device Manager** \> **Add hardware** \> **Install the hardware that I manually select from the list** \> **Show all devices** , Select the device shown in the following figure and install it.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4298/15396829873341_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4298/15399340873341_en-US.png)
 
-    2.  Enable weak host Model, perform the following command to view idx for all network interfaces.
+    2.  Enable weak host Model, and perform the following command to view idx of all network interfaces.
 
         ```
         netsh interface ipv4 show interface
         ```
 
-    3.  将所有网络接口分别设置`weakhostsend=enabled`, `weakhostsend=enabled`。 比如设置Idx为12的网卡：
+    3.  Configure `weakhostsend=enabled`, `weakhostsend=enabled` for all network interfaces. For example, configure the interface of which the idx is 12 as follows:
 
         ```
         netsh interface ipv4 set interface 12 weakhostsend=enabled
         netsh interface ipv4 set interface 12 weakhostreceive=enabled
         ```
 
-4.  Abnormal local network of the client or abnormal intermediate link of ISP.
+4.  The local network of the client or the intermediate link of the service provider is abnormal.
 
-    For the Server Load Balancer service for the public network, abnormality in client network or abnormality in ISP's network between the client and Server Load Balancer may also lead to the access failure of Server Load Balancer from the client.
+    For Internet Server Load Balancer service, client network exceptions or exceptions in the service provider's network between the client and Server Load Balancer may also lead to the failure of access from the client to Server Load Balancer.
 
-    Methods of troubleshooting: from different regions and different network environments, do an access test on the Load Balancing appropriate service port. If there is an exception only when it is accessed by the local network, it is determined that the problem is caused by a network exception, at this point, you can continue to do further troubleshooting and analysis through ongoing Ping tests or MTR routing traces.
+    Troubleshoot: Perform access test on the service port of SLB in different regions and network environments. If the exception only occurs when it is accessed from the local network, it is determined that the problem is caused by a network exception. Then you can do further troubleshooting and analysis through ongoing Ping tests or MTR route tracing.
 
 5.  Client IP address is intercepted by Alibaba Cloud Security.
 
-    For the Server Load Balancer service for the public network, if the client network is a shared network \(all LAN servers share the Internet using a limited number of public IPs\). Meanwhile, certain servers within the local network launch malicious attacks such as continuous scanning against IP addresses of relevant Alibaba Cloud services due to some factors such as being infected by viruses.
+    For Internet Server Load Balancer service, if the client network is a shared network \(all LAN servers share a public IP to access the Internet\). Meanwhile, certain servers in the local network launch malicious attacks such as continuous scanning against IPs of related Alibaba Cloud services due to factors such as being infected by viruses.
 
-    Solution: To solve this problem, you can see the following steps and add the public IPs of the local network into the access whitelist of Server Load Balancer:
+    Resolution: You can see the following steps to add the public IP of the local network to the whitelist of SLB:
 
-    1.  在客户端网络环境下访问http://ip.taobao.com，获取客户端网络环境对应的公网IP。
-    2.  Add the obtained IP address into the whitelist. This operation permits all accesses from the corresponding IP address to the Server Load Balancer.
+    1.  Visit http://ip.taobao.com in the network environment of the client to obtain the public IP of the client network.
+    2.  Add the IP to the SLB whitelist to allow all requests from the IP to SLB.
 
-        **Note:** This operation may pose a security risk, ensure that the IP in the whiteable list does not maliciously attack the load balancing.
+        **Note:** This operation may pose security risk. Ensure that the IP in the whitelist does not launch malicious attacks on the SLB.
 
-    If the problem isn't solved, you can provide the following information when submitting a ticket so that we can help you solve the problem more efficiently:
+    If the problem persists, you can provide the following information when opening a ticket so that we can help you solve the problem more efficiently:
 
-    -   - ID of SLB instance or IP address of Server Load Balancer.
-    -   - The public IP corresponding to the public network client acquired by visiting ip.taobao.com.
-    -   - Screenshots of long-time ping and MTR route tracking tests of Server Load Balancer IP implemented on public network client.
+    -   The ID of the SLB instance or the IP address of the SLB service.
+    -   The public IP of the client obtained when you visit ip.taobao.com.
+    -   Screenshots of long-time ping and MTR route tracing tests performed by the client on the IP of the SLB.
 
