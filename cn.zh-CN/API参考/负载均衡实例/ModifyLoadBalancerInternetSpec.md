@@ -6,6 +6,10 @@
 -   从按流量计费转换为按带宽计费。计费类型的变更从第二天凌晨开始生效。
 -   从按带宽计费转换为按流量计费。计费类型的变更从第二天凌晨开始生效。
 
+## 调试 {#section_tpn_2j5_qfb .section}
+
+[ModifyLoadBalancerInternetSpec](https://api.aliyun.com/#product=Slb&api=ModifyLoadBalancerInternetSpec)
+
 ## 请求参数 {#section_gy5_3db_5db .section}
 
 |参数|类型|是否必须|描述|
@@ -23,7 +27,7 @@
 **说明：** 如果不指定该参数，则表示保持原有的计费方式。
 
 |
-|Bandwidth|Integer|否|按固定带宽计费方式的公网类型实例的带宽峰值。实例中的监听共享该带宽，详情参见[共享实例带宽](../cn.zh-CN/用户指南/监听/共享实例带宽.md#)。
+|Bandwidth|Integer|否|按固定带宽计费方式的公网类型实例的带宽峰值。实例中的监听共享该带宽，详情参见[共享实例带宽](../../../../cn.zh-CN/历史文档/用户指南（旧版控制台）/监听/共享实例带宽.md#)。
 
 取值：1-5000 Mbps（各地域的带宽峰值会有不同）
 
@@ -36,6 +40,7 @@
 |名称|类型|描述|
 |:-|:-|:-|
 |RequestId|String|请求ID。|
+|orderId|String|预付费实例的订单ID。|
 
 ## 示例 {#section_ix5_h1g_cz .section}
 
