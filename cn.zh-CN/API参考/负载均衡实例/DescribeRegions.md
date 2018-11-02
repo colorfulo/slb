@@ -2,6 +2,12 @@
 
 查询可用地域。
 
+## 调试 {#section_lmd_x55_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=DescribeRegions)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_v5w_nds_cz .section}
 
 |名称|类型|是否必须|描述|
