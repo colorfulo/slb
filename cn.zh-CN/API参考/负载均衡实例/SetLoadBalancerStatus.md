@@ -2,6 +2,12 @@
 
 设置负载均衡实例的状态。
 
+## 调试 {#section_uft_fl5_qfb .section}
+
+```
+[SetLoadBalancerStatus](https://api.aliyun.com/#product=Slb&api=SetLoadBalancerStatus)
+```
+
 ## 请求参数 {#section_bqw_c1g_cz .section}
 
 |名称|类型|是否必须|描述|
