@@ -9,6 +9,12 @@
 -   一个负载均衡实例下的所有Tag和Key不能重复。
 -   当添加的标签与原有标签Key相同，但Value不同时，覆盖原有的标签。
 
+## 调试 {#section_oqj_fz1_rfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=AddTags)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_v5w_nds_cz .section}
 
 |名称|类型|是否必须|描述|
