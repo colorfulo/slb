@@ -2,6 +2,12 @@
 
 修改负载均衡的实例规格。
 
+## 调试 {#section_xlb_fv5_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=ModifyLoadBalancerInstanceSpec)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_cch_pjg_mdb .section}
 
 |名称|类型|是否必须|描述|
