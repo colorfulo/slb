@@ -8,6 +8,12 @@
 -   接口调用成功后，监听进入starting状态。
 -   当监听所属负载均衡实例的状态为locked时，调用此接口会失败。
 
+## 调试 {#section_k1f_cvz_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=StartLoadBalancerListener)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_v5w_nds_cz .section}
 
 |名称|类型|是否必须|描述|
