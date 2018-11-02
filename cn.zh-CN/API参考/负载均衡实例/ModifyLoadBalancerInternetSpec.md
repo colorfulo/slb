@@ -8,7 +8,9 @@
 
 ## 调试 {#section_tpn_2j5_qfb .section}
 
-[ModifyLoadBalancerInternetSpec](https://api.aliyun.com/#product=Slb&api=ModifyLoadBalancerInternetSpec)
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=ModifyLoadBalancerInternetSpec)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
 
 ## 请求参数 {#section_gy5_3db_5db .section}
 
