@@ -2,6 +2,12 @@
 
 查询已创建的负载均衡实例。
 
+## 调试 {#section_yqm_vt5_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=DescribeLoadBalancers)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_bqw_c1g_cz .section}
 
 |名称|类型|是否必须|描述|
