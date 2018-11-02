@@ -4,6 +4,12 @@
 
 **说明：** 只有当监听的状态为stopped或者running时，才可以删除。
 
+## 调试 {#section_ln4_2wz_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=DeleteLoadBalancerListener)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_a1k_l1c_ndb .section}
 
 |名称|类型|是否必须|描述|
