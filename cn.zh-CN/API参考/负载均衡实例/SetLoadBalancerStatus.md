@@ -5,7 +5,7 @@
 ## 调试 {#section_uft_fl5_qfb .section}
 
 ```
-[SetLoadBalancerStatus](https://api.aliyun.com/#product=Slb&api=SetLoadBalancerStatus)
+点击[这里](https://api.aliyun.com/#product=Slb&api=SetLoadBalancerStatus)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
 ```
 
 ## 请求参数 {#section_bqw_c1g_cz .section}
