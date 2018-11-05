@@ -4,26 +4,26 @@ SLB is billed based on traffic usage.
 
 ## Billing items {#section_e22_ggs_wdb .section}
 
-The cost of an SLB instance is the sum of the following billing items. The billing items vary in the network type and instance type as shown in the following table.
+The cost of an SLB instance is the sum of the following billing items. The billing items vary by the network type and instance type as shown in the following table.
 
-**Note:** “—” means that the corresponding item is not billed and “✔” means that the corresponding item is billed.
+**Note:** “-” means that the corresponding item is not billed and “✔” means that the corresponding item is billed.
 
-|Network type|Instance type|Instance fee|Traffic fee|Capacity fee|
-|:-----------|:------------|:-----------|:----------|:-----------|
-|Public network|Shared-performance instances|✔|✔|—|
+|Network type|Instance type|Instance fee|Traffic fee|Specification fee|
+|:-----------|:------------|:-----------|:----------|:----------------|
+|Internet|Shared-performance instances|✔|✔|-|
 |Guaranteed-performance instances|✔|✔|✔|
-|Intranet|Shared-performance instances|-|-|—|
-|Guaranteed-performance instances|-|—|✔|
+|Intranet|Shared-performance instances|-|-|-|
+|Guaranteed-performance instances|-|-|✔|
 
 ## Instance fee {#section_a1f_lgs_wdb .section}
 
 The instance fee is the public IP reservation fee of Internet SLB instances.
 
-**Note:** Intranet SLB instances are not charged for instance fees.
+**Note:** Intranet SLB instances are free of instance fee.
 
 Instance fees of Internet SLB instances are billed as follows:
 
--   Instance fee = instance price \(USD/Hour\) x instance reservation time
+-   Instance fee = unit instance price x instance reservation time
 
     The reservation time is the period from the time the instance is created to the time the instance is released.
 
@@ -36,7 +36,7 @@ If the price on the purchase page is different from the price listed in the tabl
 |:-----|:------------------------|
 |China \(Hangzhou\)/China \(Beijing\)/China \(Shenzhen\)/ China \(Shanghai\)/China \(Zhangjiakou\)|0.003|
 |China \(Qingdao\)|0.003|
-|China \(Hong Kong\)|0.009|
+|Hong Kong|0.009|
 |US \(Virginia\) /US \(Silicon Valley\)|0.005|
 |Singapore|0.006|
 |Japan \(Tokyo\)|0.009|
@@ -52,11 +52,11 @@ Traffic fees are charged based on the traffic usage of Internet SLB instances.
 
 Traffic fees of Internet SLB instances are billed as follows:
 
--   Public traffic fee = public network traffic \(USD/Hour\) x usage time
+-   Internet traffic fee = unit traffic price x usage time
 
-    Public network traffic is the outbound \(downstream\) traffic. Inbound \(upstream\) traffic is not included in the cost.
+    Internet traffic is the outbound \(downstream\) traffic. Inbound \(upstream\) traffic is not included in the cost.
 
--   Instance fees are billed on an hourly basis. In a billing cycle, partial hours are billed as full hours.
+-   Traffic fees are billed on an hourly basis. In a billing cycle, partial hours are billed as full hours.
 
     If the price on the purchase page is different from the price listed in the table, take the price on the purchase page as the standard.
 
@@ -94,7 +94,7 @@ For example, the capacity slb.s3.large \(1,000,000; CPS 500,000; QPS 50,000\) is
 
 The following figure is an example showing how the specification fee is billed for an SLB instance in the first three hours: 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15382787403113_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13418/15414072583113_en-US.png)
 
 The billing of the guaranteed-performance instances is flexible.  The capacity you select when purchasing an instance is the performance limitation of the instance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
