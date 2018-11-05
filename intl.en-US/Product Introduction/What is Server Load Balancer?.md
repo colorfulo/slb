@@ -8,13 +8,13 @@ By setting a virtual service address, SLB virtualizes the added ECS instances in
 
 SLB also checks the health status of the added backend servers, and automatically isolates abnormal ECS instances to eliminate single point of failure \(SPOF\), improving the overall service capability of your application. Additionally, working with Alibaba Anti-DDoS, SLB is able to defend DDoS attacks.
 
-## Components {#section_ppv_hq4_tdb .section}
+## Server Load Balancer consists of the following components: {#section_ppv_hq4_tdb .section}
 
 SLB consists of the following components:
 
 -   SLB instances
 
-    An SLB instance is a running load balancing service that distributes incoming traffic to backend servers. To use the load balancing service, you must create an SLB instance, and then configure the instance with at least one listener and backend server.
+    An SLB instance is a running load balancing service that distributes incoming traffic to backend servers. To use the load balancing service, you must create an SLB instance, and then configure the instance with at least one listener and two backend servers.
 
 -   Listeners
 
@@ -24,12 +24,12 @@ SLB consists of the following components:
 
     Backend servers are the ECS instances added to a SLB instance to process the distributed requests. You can add ECS instances to the default server group, a VServer group, or an active/standby server group to process distributed requests.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4091/1535465570936_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4091/1541385352936_en-US.png)
 
 
 ## Benefits {#section_ws5_vq4_tdb .section}
 
--   High available
+-   High availability
 
     Server Load Balancer is designed to work in the full-redundancy mode without SPOF. Server Load Balancer supports local and cross-region disaster tolerance. When Server Load Balancer is used together with DNS, the service availability is up to 99.95%.
 
@@ -39,7 +39,7 @@ SLB consists of the following components:
 
     You can increase or decrease the number of backend servers as needed to expand the service capabilities of your applications.
 
--   Low cost
+-   Cost effectiveness
 
     Compared with the traditional hardware load balancing system, Server Load Balancer reduces the cost by 60%.
 
