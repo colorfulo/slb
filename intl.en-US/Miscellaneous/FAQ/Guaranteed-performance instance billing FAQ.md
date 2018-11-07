@@ -2,7 +2,7 @@
 
 ## 1. When will the guaranteed-performance instance start charging the capacity fees? {#section_zqv_zby_wdb .section}
 
-Alibaba Cloud Server Load Balancer \(SLB\) launched the guaranteed-performance instances in May, 2017, and started the testing at the same time. For now, the guaranteed-performance instance has been tested for 10 months. SLB will charge the capacity fee on guaranteed-performance instances beginning April 1, 2018. For more information, see [How to use guaranteed-performance instances?](../../../../reseller.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#).
+Alibaba Cloud Server Load Balancer \(SLB\) launched the guaranteed-performance instances in May, 2017, and started the testing at the same time. For now, the guaranteed-performance instance has been tested for 10 months. SLB will charge the capacity fee on guaranteed-performance instances from April 1, 2018. For more information, see [How to use guaranteed-performance instances?](../../../../intl.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#).
 
 The fee collection for the guaranteed-performance instances take effect in batches by regions:
 
@@ -39,7 +39,7 @@ No.
 
 The shared-performance instances will not be charged for the capacity fee.
 
-However, if you change the shared-performance instances to the guaranteed-performance instances, the capacity fees will be collected beginning April 1, 2018.
+However, if you change the shared-performance instances to the guaranteed-performance instances, the capacity fees will be collected from April 1, 2018.
 
 ## 4. Can shared-performance instances be changed to guaranteed-performance instances? {#section_erv_zby_wdb .section}
 
@@ -63,27 +63,25 @@ You can select the largest capacity for Pay-As-You-Go instances, because Pay-As-
 
 ## 7. What is the price of the performance capacity? {#section_irv_zby_wdb .section}
 
-Six capacities are provided for guaranteed-performance instances. No capacity fee is collected for the Standard I \(slb.s1.small\) capacity. For more information, see [Billing](../../../../reseller.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#section_n5z_s1n_vdb).
+Six capacities are provided for guaranteed-performance instances. No capacity fee is collected for the Standard I \(slb.s1.small\) capacity. For more information, see [Billing](../../../../intl.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#section_n5z_s1n_vdb).
 
-## 8. Is the traffic fee the same between the shared-performance instances and guaranteed-performance instances? {#section_jrv_zby_wdb .section}
+## 8. Are the traffic fee and instance fee of guaranteed-performance instances the same as those of shared-performance instances? {#section_jrv_zby_wdb .section}
 
 Yes.
 
 ## 9. How many guaranteed-performance instances can be created? {#section_krv_zby_wdb .section}
 
-Same as the shared-performance instance, you can purchase up to 60 guaranteed-performance instances. Submit a ticket to apply for more quota.
+Same as shared-performance instances, you can purchase up to 60 guaranteed-performance instances. Open a ticket to apply for more quota.
 
 ## 10. Can I adjust the capacity of a guaranteed-performance instance? {#section_lrv_zby_wdb .section}
 
 Yes
 
--   .
--   A white list is required for the Performance-guaranteed instance of the Year-to-month package. 详情参考[包年包月实例变配](../../../../reseller.en-US/Archives/User Guide (Old Console)/SLB instances/包年包月实例变配.md#)。
+You can upgrade or downgrade a Pay-As-You-Go guaranteed-performance instance. For more information, see [后付费实例变配](../../../../intl.en-US/Archives/User Guide (Old Console)/SLB instances/Change the configuration.md#).
 
 **Note:** 
 
 -   Once a shared-performance instance is changed to a guaranteed-performance instance, it cannot be changed back.
--   If you change a shared-performance instance to a guaranteed-performance instance, a brief disconnection of service may occur for 10 to 30 seconds. If you only change an instance specification, the change takes effect immediately. When you change specifications, it is recommended that you do not change the billing method.
 -   Some instances may exist in older clusters due to historical stock. These instances need to be migrated when they are changed to guaranteed-performance instances. Therefore a service interruption of 10-30 seconds may occur. We recommend that you change the instance type when the traffic is low or perform load balancing among instances first through [GSLB](https://promotion.aliyun.com/ntms/act/globalslb.html?spm=5176.71615.741495.1.307291894icRpB&wh_ttid=pc) and then change the instance type.
 
 ## 11. Can I still buy shared-performance instances? {#section_orv_zby_wdb .section}
