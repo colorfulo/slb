@@ -75,9 +75,9 @@ Same as shared-performance instances, you can purchase up to 60 guaranteed-perfo
 
 ## 10. Can I adjust the capacity of a guaranteed-performance instance? {#section_lrv_zby_wdb .section}
 
-Yes
+Yes.
 
-You can upgrade or downgrade a Pay-As-You-Go guaranteed-performance instance. For more information, see [后付费实例变配](../../../../intl.en-US/Archives/User Guide (Old Console)/SLB instances/Change the configuration.md#).
+You can upgrade or downgrade a Pay-As-You-Go guaranteed-performance instance. For more information, see [Change the configuration](../../../../intl.en-US/User Guide/Server Load Balancer instance/Change the configuration.md#).
 
 **Note:** 
 
