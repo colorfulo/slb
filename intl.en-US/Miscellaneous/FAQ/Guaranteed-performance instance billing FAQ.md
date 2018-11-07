@@ -47,19 +47,19 @@ Yes.
 
 Once an instance is changed to the guaranteed-performance type, it cannot change back and will be charged from April 1st.
 
+## 5. Can I change a shared-performance instance to a guaranteed-performance instance? {#section_dck_fhm_sfb .section}
+
+Yes.
+
+Guaranteed-performance instances are charged and cannot be changed back to shared-performance instances.
+
 ## 5. What are the capacities for shared-performance instances? {#section_frv_zby_wdb .section}
 
 Shared-performance instances do not guarantee the performance. No capacities are available.
 
 ## 6. How to select a performance capacity? {#section_nmk_fcy_wdb .section}
 
--   You can select the largest capacity for Pay-As-You-Go instances, because Pay-As-You-Go instance are charged according to the actual usage and are free of charge in idle time.
--   A pre-payment instance \(Year-to-month\) needs to be selected based on your actual volume of business, you can evaluate your business volume in the following ways:
-    -   For Layer-4 listeners, the focus of attention is the Max Connection of persistent connection, so Max Connection is used as a key metric. Depending on the business scenario, you need to estimate the Max Connection of a Server Load Balancer instance, and select the appropriate capacity.
-    -   For Layer-7 listeners, the focus of attention is the QPS, because QPS determines the throughput of a Layer-7 application system. Similarly, you need to predict QPS based on experience. After the initial selection of a capacity, fine tune the specification during the service pressure test and actual test.
-
-        Therefore, we recommended that you first use a Pay-As-You-Go instance for service test and then by a Subscription instance after determining the capacity. For more information, see [How to select a guaranteed-performance SLB instance](../../../../reseller.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#section_ifx_kcn_vdb)
-
+You can select the largest capacity for Pay-As-You-Go instances, because Pay-As-You-Go instance are charged according to the actual usage and are free of charge in idle time.
 
 ## 7. What is the price of the performance capacity? {#section_irv_zby_wdb .section}
 
