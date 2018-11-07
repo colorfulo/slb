@@ -63,7 +63,7 @@ You can select the largest capacity for Pay-As-You-Go instances, because Pay-As-
 
 ## 7. What is the price of the performance capacity? {#section_irv_zby_wdb .section}
 
-No capacity fee is collected for the Standard I \(slb.s1.small\) capacity. For more information, see [Billing](../../../../reseller.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#section_n5z_s1n_vdb).
+Six capacities are provided for guaranteed-performance instances. No capacity fee is collected for the Standard I \(slb.s1.small\) capacity. For more information, see [Billing](../../../../reseller.en-US/Miscellaneous/FAQ/How to use guaranteed-performance SLB instances?.md#section_n5z_s1n_vdb).
 
 ## 8. Is the traffic fee the same between the shared-performance instances and guaranteed-performance instances? {#section_jrv_zby_wdb .section}
 
