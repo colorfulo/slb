@@ -2,6 +2,12 @@
 
 查询指定负载均衡实例的详细信息。
 
+## 调试 {#section_ocd_f55_qfb .section}
+
+```
+点击[这里](https://api.aliyun.com/#product=Slb&api=DescribeLoadBalancerAttribute)在OpenAPI Explorer中可视化调试，并自动生成SDK调用示例。
+```
+
 ## 请求参数 {#section_v5w_nds_cz .section}
 
 |名称|类型|是否必须|描述|
@@ -10,7 +16,7 @@
 
 |
 |LoadBalancerId|String|是|负载均衡实例ID。|
-|RegionId|String|否|负载均衡实例的地域。 您可以通过调用 DescribeRegions接口获取地域ID。
+|RegionId|String|是|负载均衡实例的地域。 您可以通过调用 DescribeRegions接口获取地域ID。
 
 |
 
